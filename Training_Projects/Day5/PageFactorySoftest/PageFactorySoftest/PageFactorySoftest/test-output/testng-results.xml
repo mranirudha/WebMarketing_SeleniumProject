@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[HOME : ]]>
+    </line>
+    <line>
+      <![CDATA[Home Page : Softest Training]]>
+    </line>
+    <line>
+      <![CDATA[Logo is Displayed : true]]>
+    </line>
+    <line>
+      <![CDATA[Login Type : Valid]]>
+    </line>
+    <line>
+      <![CDATA[UserName : smita]]>
+    </line>
+    <line>
+      <![CDATA[Password : password@12]]>
+    </line>
+    <line>
+      <![CDATA[Clicked Submit]]>
+    </line>
+    <line>
+      <![CDATA[Page after Login is : http://softest-training.com/student/student_home.php]]>
+    </line>
+    <line>
+      <![CDATA[Message displayed : smita - smita | Sign Out]]>
+    </line>
+    <line>
+      <![CDATA[Back to Home after SignOut :http://softest-training.com/index.php]]>
+    </line>
+    <line>
+      <![CDATA[<p><font color="green"><b>Method packPageObject.SoftestRunner_testLogin   PASSED</b></p>]]>
+    </line>
+    <line>
+      <![CDATA[passed]]>
+    </line>
+    <line>
+      <![CDATA[HOME : ]]>
+    </line>
+    <line>
+      <![CDATA[Home Page : Softest Training]]>
+    </line>
+    <line>
+      <![CDATA[Logo is Displayed : true]]>
+    </line>
+    <line>
+      <![CDATA[Login Type : Invalid]]>
+    </line>
+    <line>
+      <![CDATA[UserName : smita]]>
+    </line>
+    <line>
+      <![CDATA[Password : invalid]]>
+    </line>
+    <line>
+      <![CDATA[Clicked Submit]]>
+    </line>
+    <line>
+      <![CDATA[Page after Login is : http://softest-training.com/student/login.php]]>
+    </line>
+    <line>
+      <![CDATA[Message displayed: Failed to login]]>
+    </line>
+    <line>
+      <![CDATA[<p><font color="green"><b>Method packPageObject.SoftestRunner_testLogin   PASSED</b></p>]]>
+    </line>
+    <line>
+      <![CDATA[passed]]>
+    </line>
+    <line>
+      <![CDATA[HOME : ]]>
+    </line>
+    <line>
+      <![CDATA[Home Page : Softest Training]]>
+    </line>
+    <line>
+      <![CDATA[Logo is Displayed : true]]>
+    </line>
+    <line>
+      <![CDATA[Login Type : Invalid]]>
+    </line>
+    <line>
+      <![CDATA[UserName : invalid]]>
+    </line>
+    <line>
+      <![CDATA[Password : password@12]]>
+    </line>
+    <line>
+      <![CDATA[Clicked Submit]]>
+    </line>
+    <line>
+      <![CDATA[Page after Login is : http://softest-training.com/student/login.php]]>
+    </line>
+    <line>
+      <![CDATA[Message displayed: Failed to login]]>
+    </line>
+    <line>
+      <![CDATA[<p><font color="green"><b>Method packPageObject.SoftestRunner_testLogin   PASSED</b></p>]]>
+    </line>
+    <line>
+      <![CDATA[passed]]>
+    </line>
+    <line>
+      <![CDATA[HOME : ]]>
+    </line>
+    <line>
+      <![CDATA[Home Page : Softest Training]]>
+    </line>
+    <line>
+      <![CDATA[Logo is Displayed : true]]>
+    </line>
+    <line>
+      <![CDATA[Login Type : Valid]]>
+    </line>
+    <line>
+      <![CDATA[UserName : smita]]>
+    </line>
+    <line>
+      <![CDATA[Password : password@12]]>
+    </line>
+    <line>
+      <![CDATA[Clicked Submit]]>
+    </line>
+    <line>
+      <![CDATA[Page after Login is : http://softest-training.com/student/student_home.php]]>
+    </line>
+    <line>
+      <![CDATA[Message displayed : smita - smita | Sign Out]]>
+    </line>
+    <line>
+      <![CDATA[Back to Home after SignOut :http://softest-training.com/index.php]]>
+    </line>
+    <line>
+      <![CDATA[<p><font color="green"><b>Method packPageObject.SoftestRunner_testLogin   PASSED</b></p>]]>
+    </line>
+    <line>
+      <![CDATA[passed]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2018-03-15T09:11:17Z" name="Suite" finished-at="2018-03-15T09:12:24Z" duration-ms="66890">
+    <groups>
+    </groups>
+    <test started-at="2018-03-15T09:11:17Z" name="Test" finished-at="2018-03-15T09:12:24Z" duration-ms="66890">
+      <class name="packPageObject.SoftestRunner">
+        <test-method is-config="true" signature="OpenBrowser(java.lang.String)[pri:0, instance:packPageObject.SoftestRunner@5ba3f27a]" started-at="2018-03-15T09:11:17Z" name="OpenBrowser" finished-at="2018-03-15T09:11:21Z" duration-ms="4109" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ch]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenBrowser -->
+        <test-method is-config="true" signature="initElem()[pri:0, instance:packPageObject.SoftestRunner@5ba3f27a]" started-at="2018-03-15T09:11:22Z" name="initElem" finished-at="2018-03-15T09:11:22Z" duration-ms="47" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initElem -->
+        <test-method signature="testLogin(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:packPageObject.SoftestRunner@5ba3f27a]" started-at="2018-03-15T09:11:22Z" name="testLogin" data-provider="DP-XL" finished-at="2018-03-15T09:12:10Z" duration-ms="48334" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[smita]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[password@12]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[smita]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[student_home.php]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Valid]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[HOME : ]]>
+            </line>
+            <line>
+              <![CDATA[Home Page : Softest Training]]>
+            </line>
+            <line>
+              <![CDATA[Logo is Displayed : true]]>
+            </line>
+            <line>
+              <![CDATA[Login Type : Valid]]>
+            </line>
+            <line>
+              <![CDATA[UserName : smita]]>
+            </line>
+            <line>
+              <![CDATA[Password : password@12]]>
+            </line>
+            <line>
+              <![CDATA[Clicked Submit]]>
+            </line>
+            <line>
+              <![CDATA[Page after Login is : http://softest-training.com/student/student_home.php]]>
+            </line>
+            <line>
+              <![CDATA[Message displayed : smita - smita | Sign Out]]>
+            </line>
+            <line>
+              <![CDATA[Back to Home after SignOut :http://softest-training.com/index.php]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+        <test-method is-config="true" signature="TestAfterMethod(org.testng.ITestResult)[pri:0, instance:packPageObject.SoftestRunner@5ba3f27a]" started-at="2018-03-15T09:12:10Z" name="TestAfterMethod" finished-at="2018-03-15T09:12:10Z" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testLogin status=SUCCESS method=SoftestRunner.testLogin(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:packPageObject.SoftestRunner@5ba3f27a] output=HOME : ]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[<p><font color="green"><b>Method packPageObject.SoftestRunner_testLogin   PASSED</b></p>]]>
+            </line>
+            <line>
+              <![CDATA[passed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TestAfterMethod -->
+        <test-method is-config="true" signature="initElem()[pri:0, instance:packPageObject.SoftestRunner@5ba3f27a]" started-at="2018-03-15T09:12:10Z" name="initElem" finished-at="2018-03-15T09:12:10Z" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initElem -->
+        <test-method signature="testLogin(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:packPageObject.SoftestRunner@5ba3f27a]" started-at="2018-03-15T09:12:10Z" name="testLogin" data-provider="DP-XL" finished-at="2018-03-15T09:12:13Z" duration-ms="3075" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[smita]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[invalid]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Failed to login]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[login.php]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Invalid]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[HOME : ]]>
+            </line>
+            <line>
+              <![CDATA[Home Page : Softest Training]]>
+            </line>
+            <line>
+              <![CDATA[Logo is Displayed : true]]>
+            </line>
+            <line>
+              <![CDATA[Login Type : Invalid]]>
+            </line>
+            <line>
+              <![CDATA[UserName : smita]]>
+            </line>
+            <line>
+              <![CDATA[Password : invalid]]>
+            </line>
+            <line>
+              <![CDATA[Clicked Submit]]>
+            </line>
+            <line>
+              <![CDATA[Page after Login is : http://softest-training.com/student/login.php]]>
+            </line>
+            <line>
+              <![CDATA[Message displayed: Failed to login]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+        <test-method is-config="true" signature="TestAfterMethod(org.testng.ITestResult)[pri:0, instance:packPageObject.SoftestRunner@5ba3f27a]" started-at="2018-03-15T09:12:13Z" name="TestAfterMethod" finished-at="2018-03-15T09:12:13Z" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testLogin status=SUCCESS method=SoftestRunner.testLogin(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:packPageObject.SoftestRunner@5ba3f27a] output=HOME : ]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[<p><font color="green"><b>Method packPageObject.SoftestRunner_testLogin   PASSED</b></p>]]>
+            </line>
+            <line>
+              <![CDATA[passed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TestAfterMethod -->
+        <test-method is-config="true" signature="initElem()[pri:0, instance:packPageObject.SoftestRunner@5ba3f27a]" started-at="2018-03-15T09:12:13Z" name="initElem" finished-at="2018-03-15T09:12:13Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initElem -->
+        <test-method signature="testLogin(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:packPageObject.SoftestRunner@5ba3f27a]" started-at="2018-03-15T09:12:13Z" name="testLogin" data-provider="DP-XL" finished-at="2018-03-15T09:12:17Z" duration-ms="3694" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[invalid]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[password@12]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Failed to login]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[login.php]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Invalid]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[HOME : ]]>
+            </line>
+            <line>
+              <![CDATA[Home Page : Softest Training]]>
+            </line>
+            <line>
+              <![CDATA[Logo is Displayed : true]]>
+            </line>
+            <line>
+              <![CDATA[Login Type : Invalid]]>
+            </line>
+            <line>
+              <![CDATA[UserName : invalid]]>
+            </line>
+            <line>
+              <![CDATA[Password : password@12]]>
+            </line>
+            <line>
+              <![CDATA[Clicked Submit]]>
+            </line>
+            <line>
+              <![CDATA[Page after Login is : http://softest-training.com/student/login.php]]>
+            </line>
+            <line>
+              <![CDATA[Message displayed: Failed to login]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+        <test-method is-config="true" signature="initElem()[pri:0, instance:packPageObject.SoftestRunner@5ba3f27a]" started-at="2018-03-15T09:12:17Z" name="initElem" finished-at="2018-03-15T09:12:17Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initElem -->
+        <test-method is-config="true" signature="TestAfterMethod(org.testng.ITestResult)[pri:0, instance:packPageObject.SoftestRunner@5ba3f27a]" started-at="2018-03-15T09:12:17Z" name="TestAfterMethod" finished-at="2018-03-15T09:12:17Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testLogin status=SUCCESS method=SoftestRunner.testLogin(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:packPageObject.SoftestRunner@5ba3f27a] output=HOME : ]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[<p><font color="green"><b>Method packPageObject.SoftestRunner_testLogin   PASSED</b></p>]]>
+            </line>
+            <line>
+              <![CDATA[passed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TestAfterMethod -->
+        <test-method signature="testLogin(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:packPageObject.SoftestRunner@5ba3f27a]" started-at="2018-03-15T09:12:17Z" name="testLogin" data-provider="DP-XL" finished-at="2018-03-15T09:12:23Z" duration-ms="5985" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[smita]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[password@12]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[smita]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[student_home.php]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Valid]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[HOME : ]]>
+            </line>
+            <line>
+              <![CDATA[Home Page : Softest Training]]>
+            </line>
+            <line>
+              <![CDATA[Logo is Displayed : true]]>
+            </line>
+            <line>
+              <![CDATA[Login Type : Valid]]>
+            </line>
+            <line>
+              <![CDATA[UserName : smita]]>
+            </line>
+            <line>
+              <![CDATA[Password : password@12]]>
+            </line>
+            <line>
+              <![CDATA[Clicked Submit]]>
+            </line>
+            <line>
+              <![CDATA[Page after Login is : http://softest-training.com/student/student_home.php]]>
+            </line>
+            <line>
+              <![CDATA[Message displayed : smita - smita | Sign Out]]>
+            </line>
+            <line>
+              <![CDATA[Back to Home after SignOut :http://softest-training.com/index.php]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+        <test-method is-config="true" signature="TestAfterMethod(org.testng.ITestResult)[pri:0, instance:packPageObject.SoftestRunner@5ba3f27a]" started-at="2018-03-15T09:12:23Z" name="TestAfterMethod" finished-at="2018-03-15T09:12:23Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testLogin status=SUCCESS method=SoftestRunner.testLogin(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:packPageObject.SoftestRunner@5ba3f27a] output=HOME : ]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[<p><font color="green"><b>Method packPageObject.SoftestRunner_testLogin   PASSED</b></p>]]>
+            </line>
+            <line>
+              <![CDATA[passed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TestAfterMethod -->
+        <test-method is-config="true" signature="CloseBrowser()[pri:0, instance:packPageObject.SoftestRunner@5ba3f27a]" started-at="2018-03-15T09:12:23Z" name="CloseBrowser" finished-at="2018-03-15T09:12:24Z" duration-ms="663" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseBrowser -->
+      </class> <!-- packPageObject.SoftestRunner -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

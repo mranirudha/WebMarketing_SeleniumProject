@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Eurofins Websites Automation Prod Test Suite">
+
+	 <listeners>
+		<!-- <listener class-name="com.eurofins.ExtentReportsListners.ExtentReportListner" /> -->
+	</listeners> 
+
+
+	<test name="Corporate Website Automation Prod">
+		<classes>
+			<!-- <class name="com.eurofins.testcases.HomePageTest"></class> -->
+			<!--  <class name="com.eurofins.testcases.MainNavigationLinkPageTest"></class>-->
+			<!--<class name="com.eurofins.testcases.MajorNavigationLinkPageTest"></class>-->
+			<!--<class name="com.eurofins.testcases.OrangeNavigationClickPageTest"></class>-->
+			 <class name="com.eurofins.testcases.CollectAllLinks"></class> 
+			  
+		</classes>
+	</test>
+</suite>

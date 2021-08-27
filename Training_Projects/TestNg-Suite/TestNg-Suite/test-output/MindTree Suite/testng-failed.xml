@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [MindTree Suite]">
+  <test name="MyTests--MIndtRee(failed)">
+    <groups>
+      <run>
+        <include name="Regression"/>
+        <exclude name="Sanity"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="package03.Test05">
+        <methods>
+          <include name="Case2"/>
+        </methods>
+      </class> <!-- package03.Test05 -->
+    </classes>
+  </test> <!-- MyTests-MIndtRee(failed) -->
+</suite> <!-- Failed suite [MindTree Suite] -->

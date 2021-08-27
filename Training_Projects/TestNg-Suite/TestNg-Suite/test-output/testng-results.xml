@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Grid-Suite" duration-ms="43069" started-at="2018-10-25T11:15:48Z" finished-at="2018-10-25T11:16:31Z">
+    <groups>
+    </groups>
+    <test name="Test Case 01" duration-ms="42960" started-at="2018-10-25T11:15:48Z" finished-at="2018-10-25T11:16:31Z">
+      <class name="grid.TestGrid01">
+        <test-method status="PASS" signature="NodeAndBrowser(java.lang.String, java.lang.String)[pri:0, instance:grid.TestGrid01@3b088d51]" name="NodeAndBrowser" is-config="true" duration-ms="6620" started-at="2018-10-25T11:15:48Z" finished-at="2018-10-25T11:15:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[localhost:5555]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NodeAndBrowser -->
+        <test-method status="PASS" signature="GridTC01()[pri:0, instance:grid.TestGrid01@3b088d51]" name="GridTC01" duration-ms="32894" started-at="2018-10-25T11:15:55Z" finished-at="2018-10-25T11:16:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GridTC01 -->
+        <test-method status="PASS" signature="atAfterTest()[pri:0, instance:grid.TestGrid01@3b088d51]" name="atAfterTest" is-config="true" duration-ms="3435" started-at="2018-10-25T11:16:28Z" finished-at="2018-10-25T11:16:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- atAfterTest -->
+      </class> <!-- grid.TestGrid01 -->
+    </test> <!-- Test Case 01 -->
+    <test name="Test Case 02" duration-ms="43069" started-at="2018-10-25T11:15:48Z" finished-at="2018-10-25T11:16:31Z">
+      <class name="grid.TestGrid02">
+        <test-method status="PASS" signature="NodeAndBrowser(java.lang.String, java.lang.String)[pri:0, instance:grid.TestGrid02@17d677df]" name="NodeAndBrowser" is-config="true" duration-ms="4285" started-at="2018-10-25T11:15:48Z" finished-at="2018-10-25T11:15:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[localhost:6666]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NodeAndBrowser -->
+        <test-method status="PASS" signature="GridTC02()[pri:0, instance:grid.TestGrid02@17d677df]" name="GridTC02" duration-ms="38430" started-at="2018-10-25T11:15:53Z" finished-at="2018-10-25T11:16:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GridTC02 -->
+        <test-method status="PASS" signature="atAfterTest()[pri:0, instance:grid.TestGrid02@17d677df]" name="atAfterTest" is-config="true" duration-ms="340" started-at="2018-10-25T11:16:31Z" finished-at="2018-10-25T11:16:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- atAfterTest -->
+      </class> <!-- grid.TestGrid02 -->
+    </test> <!-- Test Case 02 -->
+  </suite> <!-- Grid-Suite -->
+</testng-results>

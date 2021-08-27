@@ -1,0 +1,5 @@
+1. Click on Help --> Install New software --> Paste the below url --> clcik enter
+
+http://beust.com/eclipse/
+
+2. Select the last check box

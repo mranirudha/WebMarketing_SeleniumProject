@@ -1,0 +1,39 @@
+<html>
+<head>
+<script type="text/javascript">
+function show_alert()
+{
+alert("This is a JavaScript Alert Box!")
+document.getElementById("result").innerHTML="Alert Prompted";
+}
+function show_confirm()
+{
+ var r=confirm("Press a button");
+ if (r==true)
+   {
+   x="Pressed OK Button!";
+   document.getElementById("result").innerHTML=x;
+   }
+ else
+   {
+   x="Pressed Cancel Button!";
+   document.getElementById("result").innerHTML=x;
+   }
+}
+function show_prompt()
+{
+ var v = prompt("Enter Value");
+ if(v!=null)
+  document.getElementById("result").innerHTML="Entered Value is "+v;
+  else
+ document.getElementById("result").innerHTML="Pressed Cancel button";
+}
+</script>
+</head>
+<body>
+<input type="button" onclick="show_alert()" value="Show Alert Box" />
+<input type="button" onclick="show_confirm()" value="Show Confirm Box" />
+<input type="button" onclick="show_prompt()" value="Show Prompt Box" />
+<div id="result"></div>
+</body>
+</html>

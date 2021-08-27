@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="My TestNg Suite" verbose="1" parallel = "tests" thread-count="15">
+<test name="Test Case 01">
+	<parameter name="browser" value="ff" />
+	<classes >
+		<class name="packageParallel.Parallel01" />
+	</classes>
+</test>
+<test name="Test Case 02"  >
+	<parameter name="browser" value="ie" />
+		<classes>
+			<class name="packageParallel.Parallel02"/>
+		</classes>
+</test>
+<test name="Test Case 03">
+	<parameter name="browser" value="ch" />
+		<classes>
+			<class name="packageParallel.Parallel03"/>
+		</classes>
+</test>
+</suite>

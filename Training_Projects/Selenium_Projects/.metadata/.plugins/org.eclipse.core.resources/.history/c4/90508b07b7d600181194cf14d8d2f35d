@@ -1,0 +1,27 @@
+package day2Package;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
+
+public class GoogleSearchResultCount extends openCloseBrowser 
+{
+
+	@Test
+	public void SearchResultCount() 
+	{
+		url="https://www.google.com/";
+		driver.get(url);
+		driver.findElement(By.id("lst-ib")).sendKeys("Testing");
+		List <WebElement> Suggestion = driver.findElements(By.className("sbqs_c")); 
+		System.out.println(Suggestion.size());
+		for (WebElement sugg:Suggestion) 
+		{
+		
+			System.out.println(sugg.getText());
+		}
+		
+	}
+}

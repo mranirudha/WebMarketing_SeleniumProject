@@ -1,0 +1,762 @@
+[
+  {
+    "HomePage": {
+      "title": "Worldwide laboratory testing services",
+      "Majornavigations": {
+        "title": "BlueNavigationLinks",
+        "MajornavigationsItemCount": 3,
+        "Majornavigations1": {
+          "id": "Page2"
+        },
+        "Majornavigations2": {
+          "id": "Page61"
+        },
+        "Majornavigations3": {
+          "id": "Page3"
+        }
+      },
+      "Orangenavigations": {
+        "title": "OrangeNavigationsLinks",
+        "OrangenavigationsItemCount": 12,
+        "Orangenavigations1": {
+          "id": "Page26"
+        },
+        "Orangenavigations2": {
+          "id": "Page11"
+        },
+        "Orangenavigations3": {
+          "id": "Page15"
+        },
+        "Orangenavigations4": {
+          "id": "Page8"
+        },
+        "Orangenavigations5": {
+          "id": "Page7"
+        },
+        "Orangenavigations6": {
+          "id": "Page13"
+        },
+        "Orangenavigations7": {
+          "id": "Page25"
+        },
+        "Orangenavigations8": {
+          "id": "Page24"
+        },
+        "Orangenavigations9": {
+          "id": "Page9"
+        },
+        "Orangenavigations10": {
+          "id": "Page10"
+        },
+        "Orangenavigations11": {
+          "id": "Page14"
+        },
+        "Orangenavigations12": {
+          "id": "Page16"
+        }
+      },
+      "GroupMenuNavigations": {
+        "title": "GroupMenuNavigationLinks",
+        "GroupMenuNavigationLinksItemCount": 6,
+        "GroupMenunavigations1": {
+          "id": "Page19"
+        },
+        "GroupMenunavigations2": {
+          "id": "Page4"
+        },
+        "GroupMenunavigations3": {
+          "id": "Page2"
+        },
+        "GroupMenunavigations4": {
+          "id": "Page3"
+        },
+        "GroupMenunavigations5": {
+          "id": "Page5"
+        },
+        "GroupMenunavigations6": {
+          "id": "Page6"
+        }
+      },
+      "FooterMenuNavigations": {
+        "title": "FooterMenuNavigationLinks",
+        "FooterMenuNavigationLinksItemCount": 11,
+        "FooterMenunavigations1": {
+          "id": "Page19"
+        },
+        "FooterMenunavigations2": {
+          "id": "Page4"
+        },
+        "FooterMenunavigations3": {
+          "id": "Page2"
+        },
+        "FooterMenunavigations4": {
+          "id": "Page5"
+        },
+        "FooterMenunavigations5": {
+          "id": "Page6"
+        },
+        "FooterMenunavigations6": {
+          "id": "Page3"
+        },
+        "FooterMenunavigations7": {
+          "id": "Page20"
+        },
+        "FooterMenunavigations8": {
+          "id": "Page21"
+        },
+        "FooterMenunavigations9": {
+          "id": "Page22"
+        },
+        "FooterMenunavigations10": {
+          "id": "Page1"
+        }
+      },
+      "MainNav1": {
+        "title": "Eurofins Services",
+        "MainNav1Count": 1,
+        "MainNav1": {
+          "id": "Page31"
+        }
+      },
+      "MainNav1SubNavigations": {
+        "title": "MainNav1SubNavigationsLinks",
+        "MainNav1SubNavLinkCount": 14,
+        "MainNav1SubNavLink1": {
+          "id": "Page15"
+        },
+        "MainNav1SubNavLink2": {
+          "id": "Page8"
+        },
+        "MainNav1SubNavLink3": {
+          "id": "Page23"
+        },
+        "MainNav1SubNavLink4": {
+          "id": "Page11"
+        },
+        "MainNav1SubNavLink5": {
+          "id": "Page24"
+        },
+        "MainNav1SubNavLink6": {
+          "id": "Page13"
+        },
+        "MainNav1SubNavLink7": {
+          "id": "Page16"
+        },
+        "MainNav1SubNavLink8": {
+          "id": "Page25"
+        },
+        "MainNav1SubNavLink9": {
+          "id": "Page26"
+        },
+        "MainNav1SubNavLink10": {
+          "id": "Page9"
+        },
+        "MainNav1SubNavLink11": {
+          "id": "Page7"
+        },
+        "MainNav1SubNavLink12": {
+          "id": "Page27"
+        },
+        "MainNav1SubNavLink13": {
+          "id": "Page12"
+        },
+        "MainNav1SubNavLink14": {
+          "id": "Page28"
+        },
+        "MainNav1SubNavLink15": {
+          "id": "Page10"
+        },
+        "MainNav1SubNavLink16": {
+          "id": "Page29"
+        },
+        "MainNav1SubNavLink17": {
+          "id": "Page30"
+        },
+        "MainNav1SubNavLink18": {
+          "id": "Page14"
+        }
+      },
+      "MainNav2": {
+        "title": "About Eurofins Scientific - Eurofins Scientific",
+        "MainNav2Count": 1,
+        "MainNav2": {
+          "id": "Page32"
+        }
+      },
+      "MainNav2SubNavigations": {
+        "title": "MainNav2SubNavigationsLinks",
+        "MainNav2SubNavLinkCount": 6,
+        "MainNav2SubNavLink1": {
+          "id": "Page33"
+        },
+        "MainNav2SubNavLink2": {
+          "id": "Page34"
+        },
+        "MainNav2SubNavLink3": {
+          "id": "Page35"
+        },
+        "MainNav2SubNavLink4": {
+          "id": "Page36"
+        },
+        "MainNav2SubNavLink5": {
+          "id": "Page2"
+        },
+        "MainNav2SubNavLink6": {
+          "id": "Page1"
+        },
+        "MainNav2SubNavLink7": {
+          "id": "Page1"
+        },
+        "MainNav2SubNavLink8": {
+          "id": "Page38"
+        }
+      },
+      "MainNav3": {
+        "title": "Our Scientific Impact",
+        "MainNav3Count": 1,
+        "MainNav3": {
+          "id": "Page38"
+        }
+      },
+      "MainNav3SubNavigations": {
+        "title": "MainNav3SubNavigationsLinks",
+        "MainNav3SubNavLinkCount": 4,
+        "MainNav3SubNavLink1": {
+          "id": "Page53"
+        },
+        "MainNav3SubNavLink2": {
+          "id": "Page54"
+        },
+        "MainNav3SubNavLink3": {
+          "id": "Page60"
+        },
+        "MainNav3SubNavLink4": {
+          "id": "Page55"
+        }
+      },
+      "MainNav4": {
+        "title": "Our Scientific Impact",
+        "MainNav4Count": 1,
+        "MainNav4": {
+          "id": "Page61"
+        }
+      },
+      "MainNav4SubNavigations": {
+        "title": "MainNav4SubNavigationsLinks",
+        "MainNav4SubNavLinkCount": 13,
+        "MainNav4SubNavLink1": {
+          "id": "Page62"
+        },
+        "MainNav4SubNavLink2": {
+          "id": "Page63"
+        },
+        "MainNav4SubNavLink3": {
+          "id": "Page64"
+        },
+        "MainNav4SubNavLink4": {
+          "id": "Page65"
+        },
+        "MainNav4SubNavLink5": {
+          "id": "Page66"
+        },
+        "MainNav4SubNavLink6": {
+          "id": "Page67"
+        },
+        "MainNav4SubNavLink7": {
+          "id": "Page68"
+        },
+        "MainNav4SubNavLink8": {
+          "id": "Page69"
+        },
+        "MainNav4SubNavLink9": {
+          "id": "Page70"
+        },
+        "MainNav4SubNavLink10": {
+          "id": "Page71"
+        },
+        "MainNav4SubNavLink11": {
+          "id": "Page72"
+        },
+        "MainNav4SubNavLink12": {
+          "id": "Page69"
+        },
+        "MainNav4SubNavLink13": {
+          "id": "Page73"
+        }
+      },
+      "MainNav5": {
+        "title": "Eurofins Investor Relations",
+        "MainNav5Count": 1,
+        "MainNav5": {
+          "id": "Page3"
+        }
+      },
+      "MainNav5SubNavigations": {
+        "title": "MainNav5SubNavigationsLinks",
+        "MainNav5SubNavLinkCount": 13,
+        "MainNav5SubNavLink1": {
+          "id": "Page40"
+        },
+        "MainNav5SubNavLink2": {
+          "id": "Page5"
+        },
+        "MainNav5SubNavLink3": {
+          "id": "Page5"
+        },
+        "MainNav5SubNavLink4": {
+          "id": "Page57"
+        },
+        "MainNav5SubNavLink5": {
+          "id": "Page58"
+        },
+        "MainNav5SubNavLink6": {
+          "id": "Page59"
+        },
+        "MainNav5SubNavLink7": {
+          "id": "Page43"
+        },
+        "MainNav5SubNavLink8": {
+          "id": "Page44"
+        },
+        "MainNav5SubNavLink9": {
+          "id": "Page45"
+        },
+        "MainNav5SubNavLink10": {
+          "id": "Page74"
+        },
+        "MainNav5SubNavLink11": {
+          "id": "Page46"
+        },
+        "MainNav5SubNavLink12": {
+          "id": "Page47"
+        },
+        "MainNav5SubNavLink13": {
+          "id": "Page48"
+        }
+
+      },
+      "MainNav6": {
+        "title": "Media Centre",
+        "MainNav6Count": 1,
+        "MainNav6": {
+          "id": "Page49"
+        }
+      },
+      "MainNav6SubNavigations": {
+        "title": "MainNav6SubNavigationsLinks",
+        "MainNav6SubNavLinkCount": 4,
+        "MainNav6SubNavLink1": {
+          "id": "Page5"
+        },
+        "MainNav6SubNavLink2": {
+          "id": "Page51"
+        },
+        "MainNav6SubNavLink3": {
+          "id": "Page52"
+        },
+        "MainNav6SubNavLink4": {
+          "id": "Page52"
+        }
+      },
+      "MainNav7": {
+        "title": "Contact Eurofins Scientific",
+        "MainNav7Count": 1,
+        "MainNav7": {
+          "id": "Page6"
+        }
+      },
+      "MainNav7SubNavigations": {
+        "title": "MainNav7SubNavigationsLinks",
+        "MainNav7SubNavLinkCount": 2,
+        "MainNav7SubNavLink1": {
+          "id": "Page56"
+        },
+        "MainNav7SubNavLink2": {
+          "id": "Page1"
+        },
+        "MainNav7SubNavLink3": {
+          "id": ""
+        }
+      },
+      "TextBelowFooterLogo": {
+        "title": "© Eurofins Scientific 2020",
+        "Footer Text Count": 1,
+        "Footer Nav": {
+          "id": ""
+        }
+      },
+      "LastUpdatedTextMessage": {
+        "title": "Last updated: Tuesday, June 23, 2020",
+        "Last Updated Text Count": 1,
+        "Last Updated Nav": {
+          "id": ""
+        }
+      },
+      "Page1": {
+        "id": "Worldwide Map",
+        "title": "Worldwide Interactive Map"
+         "url": "https://www.eurofins.com/contact-us/worldwide-interactive-map/"
+      },
+      "Page2": {
+        "id": "Careers",
+        "title": "Eurofins Careers – Rewarding results"
+        "url": "https://careers.eurofins.com/us/"
+      },
+      "Page3": {
+        "id": "Investor Relations",
+        "title": "Eurofins Investor Relations"
+        "url": "https://www.eurofins.com/investors/"
+      },
+      "Page4": {
+        "id": "Search",
+        "title": "Search Eurofins Corporate Site"
+        "url": "https://www.eurofins.com/search/"
+      },
+      "Page5": {
+        "id": "SafeHarborStatement",
+        "title": "Eurofins SAFE HARBOR STATEMENT - Eurofins Scientific"
+        "url": "https://www.eurofins.com/media-centre/safeharborstatement/?page=https://www.eurofins.com/media-centre/press-releases/"
+      },
+      "Page6": {
+        "id": "Contact Us",
+        "title": "Contact Eurofins Scientific"
+        "url": "https://www.eurofins.com/contact-us/"
+      },
+      "Page7": {
+        "id": "Genomic Services",
+        "title": "Genomic Services - Eurofins Scientific",
+        "url": "https://www.eurofins.com/genomic-services/"
+      },
+      "Page8": {
+        "id": "Agro",
+        "title": "Eurofins Agro"
+        "url": "https://www.eurofins.com/agro/"
+      },
+      "Page9": {
+        "id": "Forensic Services",
+        "title": "Eurofins Forensic Services - Eurofins Scientific"
+        "url": "https://www.eurofins.com/forensic-services/"
+      },
+      "Page10": {
+        "id": "Materials and Engineering Sciences",
+        "title": "Material and Engineering Sciences"
+        "url": "https://www.eurofins.com/materials-and-engineering-sciences/"
+      },
+      "Page11": {
+        "id": "BioPharma Services",
+        "title": "BioPharma Services - Eurofins Scientific",
+        "url": "https://www.eurofins.com/biopharma-services/"
+      },
+      "Page12": {
+        "id": "REACH Services",
+        "title": "Eurofins REACH Services - Eurofins Scientific"
+        "url": "https://www.eurofins.com/reach-services/"
+      },
+      "Page13": {
+        "id": "Consumer Product Testing",
+        "title": "Consumer Product Testing | Eurofins Laboratories - Eurofins Scientific"
+        "url": "https://www.eurofins.com/consumer-product-testing/"
+      },
+      "Page14": {
+        "id": "Technologies",
+        "title": "Eurofins Technologies"
+        "url": "https://www.eurofins.com/food-and-feed-testing/food-testing-services/technologies/"
+      },
+      "Page15": {
+        "id": "Agroscience Services",
+        "title": "Eurofins Agroscience Services | Experts in Agrochemical Testing - Eurofins Scientific"
+        "url": "https://www.eurofins.com/agroscience-services/"
+      },
+      "Page16": {
+        "id": "Cosmetics",
+        "title": "Cosmetics and Personal Care Product Testing - Eurofins Scientific"
+        "url": "https://www.eurofins.com/cosmetics/"
+      },
+      "Page17": {
+        "id": "Forensic Services",
+        "title": "Eurofins Forensic Services"
+        "url": "https://www.eurofins.com/forensic-services/"
+      },
+      "Page18": {
+        "id": "Cosmetics",
+        "title": "Cosmetics and Personal Care Product Testing"
+        "url": "https://www.eurofins.com/cosmetics/"
+      },
+      "Page19": {
+        "id": "HomePage",
+        "title": "Worldwide laboratory testing services"
+      },
+      "Page20": {
+        "id": "Sitemap",
+        "title": "My Sitemap"
+      },
+      "Page21": {
+        "id": "cookies",
+        "title": "Cookie Notice - Eurofins"
+      },
+      "Page22": {
+        "id": "Disclaimer",
+        "title": "Eurofins Scientific corporate website disclaimer"
+      },
+      "Page23": {
+        "id": "Assurance",
+        "title": "Eurofins Assurance | Food, Consumer Products, Healthcare, Cosmetics"
+        "url": "https://www.eurofins.com/assurance/"
+      },
+      "Page24": {
+        "id": "Clinical Diagnostics",
+        "title": "Clinical Diagnostics - Eurofins Scientific"
+        "url": "https://www.eurofins.com/clinical-diagnostics/"
+      },
+      "Page25": {
+        "id": "Environment Testing",
+        "title": "Environment Testing - Eurofins Scientific"
+        "url": "https://www.eurofins.com/environment-testing/"
+      },
+      "Page26": {
+        "id": "Food and Feed Testing",
+        "title": "Food and Feed Testing - Eurofins Scientific"
+        "url": "https://www.eurofins.com/food-and-feed-testing/"
+      },
+      "Page27": {
+        "id": "Materials and Engineering Sciences",
+        "title": "Material and Engineering Sciences | Eurofins"
+        "url": "https://www.eurofins.com/materials-and-engineering-sciences/"
+      },
+      "Page28": {
+        "id": "Technologies",
+        "title": "Eurofins Technologies - Eurofins Scientific"
+        "url": "https://www.eurofins.com/food-and-feed-testing/food-testing-services/technologies/"
+      },
+      "Page29": {
+        "id": "Medical Device",
+        "title": "Medical Device Testing - Eurofins Medical Device Testing"
+       
+      },
+      "Page30": {
+        "id": "REACH Services",
+        "title": "Eurofins REACH Services"
+         "url": "https://www.eurofins.com/reach-services/"
+      },
+      "Page31": {
+        "id": "Our services",
+        "title": "Eurofins Services"
+        "url": "https://www.eurofins.com/our-services/"       
+      },
+      "Page32": {
+        "id": "About Us",
+        "title": "About Eurofins Scientific - Eurofins Scientific"
+        "url": "https://www.eurofins.com/about-us/"
+      },
+      "Page33": {
+        "id": "Our Business",
+        "title": "Our Business - Eurofins Scientific"
+        "url": "https://www.eurofins.com/about-us/our-business/"
+      },
+      "Page34": {
+        "id": "Our Vision, Mission and Values",
+        "title": "Our Vision, Mission and Values - Eurofins Scientific"
+        "url": "https://www.eurofins.com/about-us/our-vision-mission-and-values/"
+      },
+      "Page35": {
+        "id": "Our Leadership",
+        "title": "Our Leadership - Eurofins Scientific"
+        "url": "https://www.eurofins.com/about-us/our-leadership/"
+      },
+      "Page36": {
+        "id": "Corporate Sustainability",
+        "title": "Corporate Sustainability - Eurofins Scientific"
+        "url": "https://www.eurofins.com/about-us/corporate-sustainability/"
+      },
+      "Page37": {
+        "id": "History",
+        "title": "History of Eurofins Scientific"
+      },
+      "Page38": {
+        "id": "Scientific Impact",
+        "title": "Our Scientific Impact"
+        "url": "https://www.eurofins.com/scientific-impact/"
+      },
+      "Page39": {
+        "id": "Our Business",
+        "title": "Eurofins Scientific Business model"
+        "url": "https://www.eurofins.com/about-us/our-business/"
+      },
+      "Page40": {
+        "id": "Shareholder Information",
+        "title": "Eurofins Shareholder Information"
+         "url": "https://www.eurofins.com/investors/shareholder-information/"
+      },
+      "Page41": {
+        "id": "Press Releases",
+        "title": "Press Releases"
+        "url": "https://www.eurofins.com/media-centre/safeharborstatement/?page=https://www.eurofins.com/media-centre/press-releases/"
+      },
+      "Page42": {
+        "id": "Corporate Governance",
+        "title": "Eurofins Corporate Governance"
+      },
+      "Page43": {
+        "id": "Analyst Coverage",
+        "title": "Eurofins Analyst Coverage"
+        "url": "https://www.eurofins.com/investors/analyst-coverage/"
+      },
+      "Page44": {
+        "id": "Shares in Issue",
+        "title": "Shares in Issue"
+         "url": "https://www.eurofins.com/investors/shares-in-issue/"
+      },
+      "Page45": {
+        "id": "Corporate Timetable",
+        "title": "Eurofins Corporate Timetable"
+        "url": "https://www.eurofins.com/investors/corporate-timetable/"
+      },
+      "Page46": {
+        "id": "AGM 2019",
+        "title": "Eurofins AGM 2019"
+        "url": "https://www.eurofins.com/investors/agm-2019/"
+      },
+      "Page47": {
+        "id": "Debt & Hybrid Capital Instruments",
+        "title": "Debt & Hybrid Capital Instruments"
+        "url": "https://www.eurofins.com/investors/debt-hybrid-capital-instruments/"
+      },
+      "Page48": {
+        "id": "Investor Relations Events Timetable",
+        "title": "Investor Relations Events Timetable"
+        "url": "https://www.eurofins.com/investors/investor-relations-events-timetable/"
+      },
+      "Page49": {
+        "id": "Media Centre",
+        "title": "Media Centre - Eurofins Scientific"
+        "url": "https://www.eurofins.com/media-centre/"
+      },
+      "Page50": {
+        "id": "News",
+        "title": "News from Eurofins Scientific - Eurofins Scientific"
+      },
+      "Page51": {
+        "id": "Newsletters",
+        "title": "Eurofins Newsletters"
+        "url": "https://www.eurofins.com/media-centre/newsletters/"
+      },
+      "Page52": {
+        "id": "Conferences & Fairs",
+        "title": "Conferences & Fairs"
+         "url": "https://www.eurofins.com/media-centre/conferences-fairs/"
+      },
+      "Page53": {
+        "id": "Testing for Life",
+        "title": "Testing for Life - Impressive growth story"
+        "url": "https://www.eurofins.com/scientific-impact/testing-for-life/"
+      },
+      "Page54": {
+        "id": "Scientific Innovation",
+        "title": "Scientific Innovation"
+        "url": "https://www.eurofins.com/scientific-impact/scientific-innovation/"
+      },
+      "Page55": {
+        "id": "Downloads",
+        "title": "Downloads"
+         "url": "https://www.eurofins.com/scientific-impact/downloads/"
+      },
+      "Page56": {
+        "id": "Group Directory PDF",
+        "title": "Eurofins Group Directory PDF"
+         "url": "https://www.eurofins.com/contact-us/group-directory-pdf/"
+      },
+      "Page57": {
+        "id": "Our Success in Numbers",
+        "title": "Our success, in numbers, over the years - Eurofins Scientific"
+        "url": "https://www.eurofins.com/investors/our-success-in-numbers/"
+      },
+      "Page58": {
+        "id": "Board Committees",
+        "title": "Board Committees - Eurofins Scientific"
+        "url": "https://www.eurofins.com/investors/board-committees/"
+        
+      },
+      "Page59": {
+        "id": "Executives’ Dealings Disclosures",
+        "title": "Executives’ Dealings Disclosures - Eurofins Scientific"
+         "url": "https://www.eurofins.com/investors/executives-dealings-disclosures/"
+      },
+      "Page74": {
+        "id": "AGM 2020",
+        "title": "Eurofins AGM 2020 - Eurofins Scientific"
+        "url": "https://www.eurofins.com/investors/agm-2019/"
+      },
+      "Page60": {
+        "id": "Scientific Publications",
+        "title": "Eurofins Scientific Publications - Eurofins Scientific"
+        "url": "https://www.eurofins.com/scientific-impact/scientific-publications/"
+      },
+      "Page61": {
+        "id": "Eurofins COVID-19 Response",
+        "title": "Response to the COVID-19 pandemic. - Eurofins Scientific"
+        "url": "https://www.eurofins.com/covid-19-response/"
+      },
+      "Page62": {
+        "id": "CEO Letter",
+        "title": "Company CEO Gilles Martin on the challenges of COVID-19 - Eurofins Scientific"
+         "url": "https://www.eurofins.com/covid-19-response/ceo-letter/"
+      },
+      "Page63": {
+        "id": "Latest News",
+        "title": "Overview of press releases relating to COVID-19 - Eurofins Scientific"
+        "url": "https://www.eurofins.com/covid-19-response/latest-news/"
+      },
+      "Page64": {
+        "id": "Business Continuity",
+        "title": "Statement on Business Continuity measures - Eurofins Scientific"
+        "url": "https://www.eurofins.com/covid-19-response/business-continuity/"
+      },
+      "Page65": {
+        "id": "SAFER@WORK",
+        "title": "SAFER@WORK™ – Keeping staff and customers safer during the COVID-19 pandemic - Eurofins Scientific"
+        "url": "https://www.eurofins.com/covid-19-response/safer-work/"
+      },
+      "Page66": {
+        "id": "Clinical Diagnostic Services",
+        "title": "Clinical Diagnostic Services- Eurofins Scientific"
+         "url": "https://www.eurofins.com/covid-19-response/clinical-diagnostic-services/"
+      },
+      "Page67": {
+        "id": "COVID-19 Product Testing",
+        "title": "Covid-19 | Testing, inspection and certification of products and devices - Eurofins Scientific"
+          "url": "https://www.eurofins.com/consumer-product-testing/covid-19-product-testing/"
+      },
+      "Page68": {
+        "id": "Viruses",
+        "title": "Detection of SARS-CoV-2 in Swabs of Environmental Surfaces"
+        "url": "https://www.eurofins-technologies.com/products/viruses.html"
+      },
+      "Page69": {
+        "id": "Gold Standard Diagnostics",
+        "title": "Home"
+         "url": "https://www.goldstandarddiagnostics.com/home/"
+      },
+      "Page70": {
+        "id": "Genomic Solutions",
+        "title": "SARS-CoV-2 / COVID-19 Genomic Tools Solutions - Eurofins Scientific"
+        "url": "https://www.eurofins.com/covid-19-response/genomic-solutions/"
+      },
+      "Page71": {
+        "id": "COVID-19 Testing BioPharma",
+        "title": "COVID -19 BioPharma Product Testing - Eurofins Scientific"
+        "url": "https://www.eurofins.com/biopharma-services/product-testing/services/covid-19-testing/"
+      },
+      "Page72": {
+        "id": "Covid-19 Testing Medical",
+        "title": "COVID 19 | Medical Device Testing Solutions - Eurofins Scientific"
+        "url": "https://www.eurofins.com/medical-device/services/covid-19-testing/"
+      },
+      "Page73": {
+        "id": "Surface Testing Services",
+        "title": "SARS-CoV-2/COVID-19 | Environmental & Surface Testing Services - Eurofins Scientific"
+        "url": "https://www.eurofins.com/covid-19-response/surface-testing-services/"
+      }
+
+    }
+  }
+]

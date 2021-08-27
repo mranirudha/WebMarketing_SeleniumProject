@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Eurofins Websites Automation Prod Test Suite]">
+  <listeners>
+    <listener class-name="com.eurofins.ExtentReportsListners.ExtentReportListner"/>
+  </listeners>
+  <test thread-count="5" name="Corporate Website Automation Prod(failed)">
+    <classes>
+      <class name="com.eurofins.testcases.CollectAllLinks">
+        <methods>
+          <include name="groupNavLink1Test"/>
+          <include name="mainNav7SubNavLink1Test"/>
+          <include name="orangeNavLink4Test"/>
+          <include name="mainNavLink7Test"/>
+          <include name="firstBlueImageTest"/>
+          <include name="footerNavLink6Test"/>
+          <include name="footerNavLink4Test"/>
+          <include name="mainNav3SubNavLink4Test"/>
+          <include name="mainNav4SubNavLink5Test"/>
+          <include name="mainNav5SubNavLink6Test"/>
+          <include name="mainNav1SubNavLink2Test"/>
+          <include name="mainNav2SubNavLink3Test"/>
+          <include name="majorNavLink1Test"/>
+          <include name="mainNav1SubNavLink11Test"/>
+          <include name="mainNav1SubNavLink17Test"/>
+          <include name="mainNav3SubNavLink11Test"/>
+          <include name="thirdBlueImageTest"/>
+          <include name="mainNav5SubNavLink12Test"/>
+          <include name="groupNavLink3Test"/>
+          <include name="mainNav1SubNavLink15Test"/>
+          <include name="orangeNavLink2Test"/>
+          <include name="mainNav6SubNavLink2Test"/>
+          <include name="footerNavLink2Test"/>
+          <include name="mainNav2SubNavLink8Test"/>
+          <include name="LastUpdatedTxtTest"/>
+          <include name="majorNavLink3Test"/>
+          <include name="mainNavLink2Test"/>
+          <include name="mainNav1SubNavLink4Test"/>
+          <include name="mainNav3SubNavLink6Test"/>
+          <include name="mainNav5SubNavLink8Test"/>
+          <include name="mainNav3SubNavLink2Test"/>
+          <include name="mainNav5SubNavLink4Test"/>
+          <include name="mainNav5SubNavLink10Test"/>
+          <include name="mainNav3SubNavLink1Test"/>
+          <include name="mainNav4SubNavLink13Test"/>
+          <include name="mainNav1SubNavLink13Test"/>
+          <include name="tearDown"/>
+          <include name="mainNav1SubNavLink5Test"/>
+          <include name="mainNav2SubNavLink6Test"/>
+          <include name="mainNav5SubNavLink9Test"/>
+          <include name="homePageLogoTest"/>
+          <include name="mainNav4SubNavLink1Test"/>
+          <include name="mainNav5SubNavLink2Test"/>
+          <include name="footerNavLink1Test"/>
+          <include name="mainNavLink4Test"/>
+          <include name="groupNavLink6Test"/>
+          <include name="mainNav3SubNavLink8Test"/>
+          <include name="mainNav4SubNavLink9Test"/>
+          <include name="orangeNavLink8Test"/>
+          <include name="orangeNavLink12Test"/>
+          <include name="mainNav2SubNavLink4Test"/>
+          <include name="orangeNavLink6Test"/>
+          <include name="mainNav4SubNavLink11Test"/>
+          <include name="orangeNavLink3Test"/>
+          <include name="mainNav1SubNavLink7Test"/>
+          <include name="loadWebBrowser"/>
+          <include name="mainNav1SubNavLink9Test"/>
+          <include name="mainNav4SubNavLink7Test"/>
+          <include name="footerNavLink10Test"/>
+          <include name="mainNav4SubNavLink3Test"/>
+          <include name="mainNavLink6Test"/>
+          <include name="footerNavLink8Test"/>
+          <include name="mainNav2SubNavLink2Test"/>
+          <include name="orangeNavLink10Test"/>
+          <include name="mainNavLink1Test"/>
+          <include name="groupNavLink2Test"/>
+          <include name="mainNav1SubNavLink18Test"/>
+          <include name="mainNav1SubNavLink16Test"/>
+          <include name="mainNav3SubNavLink10Test"/>
+          <include name="footerNavLink5Test"/>
+          <include name="mainNav1SubNavLink3Test"/>
+          <include name="mainNav3SubNavLink5Test"/>
+          <include name="copyrightMessageTxtTest"/>
+          <include name="mainNav5SubNavLink7Test"/>
+          <include name="homePageTitleTest"/>
+          <include name="mainNav5SubNavLink13Test"/>
+          <include name="footerBottomLogoTest"/>
+          <include name="orangeNavLink1Test"/>
+          <include name="setUp"/>
+          <include name="mainNav5SubNavLink11Test"/>
+          <include name="groupNavLink4Test"/>
+          <include name="mainNav1SubNavLink14Test"/>
+          <include name="majorNavLink2Test"/>
+          <include name="mainNav1SubNavLink1Test"/>
+          <include name="mainNav3SubNavLink3Test"/>
+          <include name="mainNav5SubNavLink5Test"/>
+          <include name="footerNavLink3Test"/>
+          <include name="mainNav6SubNavLink1Test"/>
+          <include name="mainNav4SubNavLink2Test"/>
+          <include name="mainNav5SubNavLink3Test"/>
+          <include name="groupNavLink5Test"/>
+          <include name="mainNavLink3Test"/>
+          <include name="orangeNavLink11Test"/>
+          <include name="orangeNavLink9Test"/>
+          <include name="footerNavLink9Test"/>
+          <include name="mainNav3SubNavLink7Test"/>
+          <include name="mainNav4SubNavLink8Test"/>
+          <include name="mainNav4SubNavLink12Test"/>
+          <include name="mainNav6SubNavLink3Test"/>
+          <include name="secondBlueImageTest"/>
+          <include name="mainNav1SubNavLink12Test"/>
+          <include name="orangeNavLink7Test"/>
+          <include name="mainNav1SubNavLink6Test"/>
+          <include name="mainNav2SubNavLink7Test"/>
+          <include name="checkStatusCode"/>
+          <include name="footerNavLink7Test"/>
+          <include name="mainNav4SubNavLink6Test"/>
+          <include name="mainNavLink5Test"/>
+          <include name="mainNav1SubNavLink8Test"/>
+          <include name="mainNav5SubNavLink1Test"/>
+          <include name="mainNav3SubNavLink9Test"/>
+          <include name="mainNav1SubNavLink10Test"/>
+          <include name="orangeNavLink5Test"/>
+          <include name="mainNav2SubNavLink5Test"/>
+          <include name="mainNav2SubNavLink1Test"/>
+          <include name="mainNav4SubNavLink10Test"/>
+          <include name="mainNav4SubNavLink4Test"/>
+          <include name="mainNav7SubNavLink2Test"/>
+        </methods>
+      </class> <!-- com.eurofins.testcases.CollectAllLinks -->
+    </classes>
+  </test> <!-- Corporate Website Automation Prod(failed) -->
+</suite> <!-- Failed suite [Eurofins Websites Automation Prod Test Suite] -->

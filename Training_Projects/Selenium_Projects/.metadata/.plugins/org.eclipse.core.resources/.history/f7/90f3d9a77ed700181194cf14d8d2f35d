@@ -1,0 +1,13 @@
+package day3Package;
+
+import org.testng.annotations.Test;
+
+public class ExampleMultiTabs extends OpenCloseBrowser 
+{
+	@Test
+	public void MultiTabs()
+	{
+	url="";
+	driver.get(url);
+	}
+}

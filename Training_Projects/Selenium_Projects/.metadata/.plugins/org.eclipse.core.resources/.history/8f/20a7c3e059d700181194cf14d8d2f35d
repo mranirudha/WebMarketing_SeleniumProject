@@ -1,0 +1,14 @@
+package day3Package;
+
+import org.testng.annotations.Test;
+
+public class IFrameUsingSoftTest extends OpenCloseBrowser 
+{
+	@Test
+	public void IFrameOfSoftTest() 
+	{
+		
+		
+	}
+
+}

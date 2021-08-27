@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="15" guice-stage="DEVELOPMENT" name="Failed suite [My TestNg Suite]" parallel="tests">
+  <test thread-count="15" name="Test Case 03(failed)" parallel="tests">
+    <parameter name="browser" value="ch"/>
+    <classes>
+      <class name="packageParallel.Parallel03">
+        <methods>
+          <include name="OpenBrowser"/>
+          <include name="TC_Linkedin"/>
+          <include name="CloseBrowser"/>
+        </methods>
+      </class> <!-- packageParallel.Parallel03 -->
+    </classes>
+  </test> <!-- Test Case 03(failed) -->
+  <test thread-count="15" name="Test Case 02(failed)" parallel="tests">
+    <parameter name="browser" value="ie"/>
+    <classes>
+      <class name="packageParallel.Parallel02">
+        <methods>
+          <include name="TC_Flipkart"/>
+          <include name="OpenBrowser"/>
+          <include name="CloseBrowser"/>
+        </methods>
+      </class> <!-- packageParallel.Parallel02 -->
+    </classes>
+  </test> <!-- Test Case 02(failed) -->
+  <test thread-count="15" name="Test Case 01(failed)" parallel="tests">
+    <parameter name="browser" value="ff"/>
+    <classes>
+      <class name="packageParallel.Parallel01">
+        <methods>
+          <include name="OpenBrowser"/>
+          <include name="TC_Google"/>
+          <include name="CloseBrowser"/>
+        </methods>
+      </class> <!-- packageParallel.Parallel01 -->
+    </classes>
+  </test> <!-- Test Case 01(failed) -->
+</suite> <!-- Failed suite [My TestNg Suite] -->

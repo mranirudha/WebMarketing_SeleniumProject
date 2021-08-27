@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Test Suite]">
+  <test thread-count="5" name="MyTests--Smita(failed)">
+    <groups>
+      <run>
+        <exclude name="Regression"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="package03.Test04">
+        <methods>
+          <include name="Case2"/>
+        </methods>
+      </class> <!-- package03.Test04 -->
+      <class name="apackageParallel.Parallel01">
+        <methods>
+          <include name="OpenBrowser"/>
+          <include name="CloseBrowser"/>
+          <include name="TC_Google"/>
+        </methods>
+      </class> <!-- apackageParallel.Parallel01 -->
+      <class name="apackageParallel.Parallel02">
+        <methods>
+          <include name="TC_Flipkart"/>
+          <include name="OpenBrowser"/>
+          <include name="CloseBrowser"/>
+        </methods>
+      </class> <!-- apackageParallel.Parallel02 -->
+      <class name="package02.Test03">
+        <methods>
+          <include name="Case1"/>
+          <include name="start2"/>
+          <include name="Case5"/>
+          <include name="Case4"/>
+        </methods>
+      </class> <!-- package02.Test03 -->
+      <class name="apackageParallel.Parallel03">
+        <methods>
+          <include name="TC_Linkedin"/>
+          <include name="OpenBrowser"/>
+          <include name="CloseBrowser"/>
+        </methods>
+      </class> <!-- apackageParallel.Parallel03 -->
+      <class name="package03.Test05">
+        <methods>
+          <include name="Case4"/>
+          <include name="Case5"/>
+          <include name="Case1"/>
+        </methods>
+      </class> <!-- package03.Test05 -->
+      <class name="package01.Test01">
+        <methods>
+          <include name="Case3"/>
+          <include name="Case2"/>
+        </methods>
+      </class> <!-- package01.Test01 -->
+      <class name="package01.Test02">
+        <methods>
+          <include name="Case3"/>
+        </methods>
+      </class> <!-- package01.Test02 -->
+    </classes>
+  </test> <!-- MyTests-Smita(failed) -->
+</suite> <!-- Failed suite [Test Suite] -->

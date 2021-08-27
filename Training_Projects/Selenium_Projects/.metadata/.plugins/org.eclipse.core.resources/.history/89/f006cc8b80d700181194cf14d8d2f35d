@@ -1,0 +1,21 @@
+package day3Package;
+
+import org.openqa.selenium.By;
+import org.testng.annotations.Test;
+
+public class ExampleMultiTabs extends OpenCloseBrowser 
+{
+	@Test
+	public void MultiTabs()
+	{
+	url="https://www.irctc.co.in/nget/train-search";
+	driver.get(url);
+	driver.findElement(By.partialLinkText("MEALS")).click();
+	driver.findElement(By.partialLinkText("E-Catering")).click();
+	driver.findElement(By.partialLinkText("SERVICE AT STATIONS")).click();
+	driver.findElement(By.partialLinkText("Battery Operated Cars")).click();
+	driver.findElement(By.partialLinkText("E-wheelchair")).click();
+	driver.findElement(By.partialLinkText("Retiring Room")).click();
+	
+	}
+}

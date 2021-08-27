@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract method &apos;public void closeOpenedTabs()&apos; from &apos;com.eurofins.testcases.MajorNavigationLinkPageTest.pageSwitch()&apos; to &apos;com.eurofins.testcases.MajorNavigationLinkPageTest&apos;&#x0D;&#x0A;- Original project: &apos;CorporateWebsiteAutomationProd&apos;&#x0D;&#x0A;- Method name: &apos;closeOpenedTabs&apos;&#x0D;&#x0A;- Destination type: &apos;com.eurofins.testcases.MajorNavigationLinkPageTest&apos;&#x0D;&#x0A;- Declared visibility: &apos;public&apos;" comments="false" description="Extract method &apos;closeOpenedTabs&apos;" destination="0" exceptions="false" flags="786434" id="org.eclipse.jdt.ui.extract.method" input="/src\/test\/java&lt;com.eurofins.testcases{MajorNavigationLinkPageTest.java" name="closeOpenedTabs" replace="false" selection="6787 342" stamp="1587653659918" version="1.0" visibility="1"/>
+</session>

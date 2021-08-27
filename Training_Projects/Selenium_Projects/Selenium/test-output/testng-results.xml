@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="67197" started-at="2018-10-25T08:44:20Z" finished-at="2018-10-25T08:45:27Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="67197" started-at="2018-10-25T08:44:20Z" finished-at="2018-10-25T08:45:27Z">
+      <class name="day4Package.ExampleGoogleSearchUsingDDT">
+        <test-method status="PASS" signature="OpenBrowser()[pri:0, instance:day4Package.ExampleGoogleSearchUsingDDT@ea1a8d5]" name="OpenBrowser" is-config="true" duration-ms="2192" started-at="2018-10-25T08:44:20Z" finished-at="2018-10-25T08:44:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenBrowser -->
+        <test-method status="PASS" signature="GoogleDDT(java.lang.String)[pri:0, instance:day4Package.ExampleGoogleSearchUsingDDT@ea1a8d5]" name="GoogleDDT" duration-ms="38193" started-at="2018-10-25T08:44:22Z" data-provider="SearchKeyWords" finished-at="2018-10-25T08:45:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Selenium]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GoogleDDT -->
+        <test-method status="PASS" signature="GoogleDDT(java.lang.String)[pri:0, instance:day4Package.ExampleGoogleSearchUsingDDT@ea1a8d5]" name="GoogleDDT" duration-ms="7533" started-at="2018-10-25T08:45:01Z" data-provider="SearchKeyWords" finished-at="2018-10-25T08:45:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[LoadRunner]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GoogleDDT -->
+        <test-method status="PASS" signature="GoogleDDT(java.lang.String)[pri:0, instance:day4Package.ExampleGoogleSearchUsingDDT@ea1a8d5]" name="GoogleDDT" duration-ms="17716" started-at="2018-10-25T08:45:08Z" data-provider="SearchKeyWords" finished-at="2018-10-25T08:45:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Jmeter]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GoogleDDT -->
+        <test-method status="PASS" signature="ClseDriver()[pri:0, instance:day4Package.ExampleGoogleSearchUsingDDT@ea1a8d5]" name="ClseDriver" is-config="true" duration-ms="911" started-at="2018-10-25T08:45:26Z" finished-at="2018-10-25T08:45:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ClseDriver -->
+      </class> <!-- day4Package.ExampleGoogleSearchUsingDDT -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

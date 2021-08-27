@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="15" guice-stage="DEVELOPMENT" name="Failed suite [TestSuit]">
+  <test thread-count="15" name="GeneratedFromTestNG(failed)">
+    <classes>
+      <class name="packageParallel.Parallel03">
+        <methods>
+          <include name="OpenBrowser"/>
+          <include name="TC_Linkedin"/>
+          <include name="CloseBrowser"/>
+        </methods>
+      </class> <!-- packageParallel.Parallel03 -->
+      <class name="package01.Test01">
+        <methods>
+          <include name="Case1"/>
+          <include name="Case2"/>
+        </methods>
+      </class> <!-- package01.Test01 -->
+      <class name="package03.Test04">
+        <methods>
+          <include name="Case2"/>
+          <include name="Case1"/>
+        </methods>
+      </class> <!-- package03.Test04 -->
+      <class name="grid.TestGrid01">
+        <methods>
+          <include name="atAfterTest"/>
+          <include name="NodeAndBrowser"/>
+          <include name="GridTC01"/>
+        </methods>
+      </class> <!-- grid.TestGrid01 -->
+      <class name="package02.Test03">
+        <methods>
+          <include name="Case3"/>
+          <include name="Case1"/>
+          <include name="Case2"/>
+          <include name="start2"/>
+          <include name="Case5"/>
+          <include name="Case4"/>
+        </methods>
+      </class> <!-- package02.Test03 -->
+      <class name="grid.TestGrid02">
+        <methods>
+          <include name="GridTC02"/>
+          <include name="atAfterTest"/>
+          <include name="NodeAndBrowser"/>
+        </methods>
+      </class> <!-- grid.TestGrid02 -->
+      <class name="packageParallel.Parallel02">
+        <methods>
+          <include name="TC_Flipkart"/>
+          <include name="OpenBrowser"/>
+          <include name="CloseBrowser"/>
+        </methods>
+      </class> <!-- packageParallel.Parallel02 -->
+      <class name="package03.Test05">
+        <methods>
+          <include name="Case4"/>
+          <include name="Case5"/>
+          <include name="Case1"/>
+          <include name="Case2"/>
+          <include name="Case3"/>
+        </methods>
+      </class> <!-- package03.Test05 -->
+      <class name="packageParallel.Parallel01">
+        <methods>
+          <include name="OpenBrowser"/>
+          <include name="TC_Google"/>
+          <include name="CloseBrowser"/>
+        </methods>
+      </class> <!-- packageParallel.Parallel01 -->
+      <class name="package01.Test02">
+        <methods>
+          <include name="Case2"/>
+          <include name="Case1"/>
+          <include name="Case3"/>
+        </methods>
+      </class> <!-- package01.Test02 -->
+    </classes>
+  </test> <!-- GeneratedFromTestNG(failed) -->
+</suite> <!-- Failed suite [TestSuit] -->

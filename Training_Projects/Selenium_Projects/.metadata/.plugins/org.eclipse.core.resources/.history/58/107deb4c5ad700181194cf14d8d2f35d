@@ -1,0 +1,15 @@
+package day3Package;
+
+import org.testng.annotations.Test;
+
+public class IFrameUsingSoftTest extends OpenCloseBrowser 
+{
+	@Test
+	public void IFrameOfSoftTest() 
+	{
+		url="file:///C:/Users/training/Desktop/Anirudha/Day3/1521781750IframeExample.html";
+		driver.get(url);
+		
+	}
+
+}

@@ -1,0 +1,8 @@
+package day3Package;
+
+
+
+public class ExampleWebTable extends OpenCloseBrowser 
+{
+
+}

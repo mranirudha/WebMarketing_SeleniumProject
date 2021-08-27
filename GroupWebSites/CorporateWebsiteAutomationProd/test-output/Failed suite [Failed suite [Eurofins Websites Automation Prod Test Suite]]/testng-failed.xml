@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Failed suite [Failed suite [Eurofins Websites Automation Prod Test Suite]]]">
+  <test thread-count="5" name="Corporate Website Automation Prod(failed)(failed)(failed)">
+    <classes>
+      <class name="com.eurofins.testcases.HomePageTest">
+        <methods>
+          <include name="homePageLogoTest"/>
+          <include name="setUp"/>
+          <include name="homePageTitleTest"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.eurofins.testcases.HomePageTest -->
+    </classes>
+  </test> <!-- Corporate Website Automation Prod(failed)(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Failed suite [Eurofins Websites Automation Prod Test Suite]]] -->

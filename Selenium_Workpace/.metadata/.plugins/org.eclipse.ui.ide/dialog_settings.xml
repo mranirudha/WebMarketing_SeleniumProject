@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\Users\UJ56\Desktop\certificate\src"/>
+		<item value="C:\Anirudha_Project\Eurofins_Project\Selenium_Projects\Selenium_Workpace\CorporateWebsiteProd"/>
+		<item value="C:\Anirudha_Project\Eurofins_Project\Selenium_Projects\Eurofins_Project_Demo"/>
+		<item value="C:\Anirudha_Project\Eurofins_Project\Selenium_Projects\Training_Projects\Selenium_Projects"/>
+		<item value="C:\Anirudha_Project\Eurofins_Project\Selenium_Projects\Training_Projects\Day5"/>
+		<item value="C:\Anirudha_Project\Eurofins_Project\Selenium_Projects\Training_Projects\Day4"/>
+		<item value="C:\Anirudha_Project\Eurofins_Project\Selenium_Projects\Training_Projects\Day3"/>
+		<item value="C:\Anirudha_Project\Eurofins_Project\Selenium_Projects\Training_Projects\Day2"/>
+	</list>
+	<section name="CleanDialogSettings">
+		<item value="500" key="DIALOG_WIDTH"/>
+		<item value="false" key="TOGGLE_SELECTED"/>
+		<item value="402" key="DIALOG_HEIGHT"/>
+		<item value="550" key="DIALOG_X_ORIGIN"/>
+		<item value="162" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="true" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Anirudha_Project\Eurofins_Project\Selenium_Projects\Training_Projects\Day2"/>
+			<item value="C:\Anirudha_Project\Eurofins_Project\Selenium_Projects\Eurofins_Project_Demo\Demo_Project"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+	<section name="ResourceNavigator">
+		<item value="Aggregate for window 1566889231842" key="ResourceWorkingSetFilter.STORE_WORKING_SET"/>
+		<item value="1" key="ResourceViewer.STORE_SORT_TYPE"/>
+	</section>
+	<section name="NewWizardAction">
+		<item value="org.eclipse.jdt.ui.wizards.JavaProjectWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.jdt.ui.java"/>
+			<item value="org.eclipse.m2e"/>
+		</list>
+	</section>
+</section>

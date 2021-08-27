@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Test Suite" >
+	<test name="MyTests--Smita">
+		<packages>
+			<package name=".*"/>
+				<groups>
+					<run>
+							<include name="Sanity"/>
+							<exclude name="Regression"/>
+					</run>
+				</groups>
+		</packages>
+	</test>
+</suite>

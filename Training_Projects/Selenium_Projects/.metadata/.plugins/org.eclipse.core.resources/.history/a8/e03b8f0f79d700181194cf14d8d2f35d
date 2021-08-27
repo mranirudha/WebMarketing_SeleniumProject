@@ -1,0 +1,6 @@
+package day3Package;
+
+public class ExampleMultiTabs extends OpenCloseBrowser 
+{
+	
+}

@@ -1,0 +1,3632 @@
+public boolean hyperLinkTest(String orangeNavPageUrl) {
+		boolean hyperLinkVal = false;
+//		List<WebElement> linkElements = driver.findElements(By.tagName("a"));
+		List<WebElement> linkElements = driver.findElements(By.xpath("//body//div//nav[@id='nav']//ul"));
+		String[] linkTexts = new String[linkElements.size()];
+		int i = 0;
+		int count = 0;
+		
+		// extract the link texts of each link element
+		for (WebElement e : linkElements) {
+			linkTexts[i] = e.getText();
+			i++;
+			count ++;
+		}
+		
+		System.out.println(count);
+
+		// test each link
+
+		for (String t : linkTexts) {
+			if (!(t.isEmpty())) {
+				if (t.trim() == "Contacts Page") {
+					continue;
+				} else if (t.trim() == "Careers Page") {
+					continue;
+				} else {
+					try {
+						driver.findElement(By.linkText(t)).click();
+					} catch (Exception ignore) {
+
+					}
+				}
+			} else if (t == "Cookie Preference") {
+				HomePage homepage = new HomePage();
+				TestUtil testUtil = new TestUtil();
+				boolean check = getGDPRCheck(homepage, testUtil);
+				if (check) {
+					testUtil.switchToDefaultContent();
+				}
+
+			} else {
+				continue;
+			}
+			driver.navigate().to(orangeNavPageUrl);
+			hyperLinkVal = true;
+		}
+		return hyperLinkVal;
+	}
+	
+	/*
+
+
+/*@Test(priority=2)
+	public void homePageLogoTest() {
+		homepage=new HomePage();
+		boolean check = getGDPRCheck(homepage,testUtil);
+		if(check)
+		{
+			testUtil.switchToDefaultContent();
+			boolean homepagelogo = homepage.validateHomePageLogo();
+			Assert.assertTrue(homepagelogo);
+		}
+	}
+	
+	@Test(priority=3)
+	public void firstBlueImageTest() {
+		homepage=new HomePage();
+		boolean check = getGDPRCheck(homepage,testUtil);
+		if(check)
+		{
+			testUtil.switchToDefaultContent();
+			boolean firstblueimage = homepage.validateFirstBlueImage();
+			Assert.assertTrue(firstblueimage);
+		}
+	}
+	
+	@Test(priority=4)
+	public void secondBlueImageTest() {
+		homepage=new HomePage();
+		boolean check = getGDPRCheck(homepage,testUtil);
+		if(check)
+		{
+			testUtil.switchToDefaultContent();
+			boolean secondblueimage = homepage.validateSecondBlueImage();
+			Assert.assertTrue(secondblueimage);
+		}
+	}
+	
+	@Test(priority=5)
+	public void thirdBlueImageTest() {
+		homepage=new HomePage();
+		boolean check = getGDPRCheck(homepage,testUtil);
+		if(check)
+		{
+			testUtil.switchToDefaultContent();
+			boolean thirdblueimage = homepage.validateThirdBlueImage();
+			Assert.assertTrue(thirdblueimage);
+		}
+	}
+	
+	@Test(priority=6)
+	public void firstBlueImageLinkTest() {
+		homepage=new HomePage();
+		worldwideMap = new WorldwideInteractiveMapPage();    
+		boolean check = getGDPRCheck(homepage,testUtil);
+		if(check)
+		{
+			testUtil.switchToDefaultContent();
+			worldwideMap = homepage.validatefirstblueimagelink();
+		}
+	}
+	
+	@Test(priority=7)
+	public void secondBlueImageLinkTest() {
+		homepage=new HomePage();
+		careerPage=new CareersEurofinsPage();   
+		boolean check = getGDPRCheck(homepage,testUtil);
+		if(check)
+		{
+			testUtil.switchToDefaultContent();
+			careerPage = homepage.validatesecondblueimagelink();
+		}
+	}
+	
+	@Test(priority=8)
+	public void thirdBlueImageLinkTest() {
+		homepage=new HomePage();
+		investerRelation=new InvestorRelationsPage();  
+		boolean check = getGDPRCheck(homepage,testUtil);
+		if(check)
+		{
+			testUtil.switchToDefaultContent();
+			investerRelation  = homepage.validatethirdblueimagelink();
+		}
+	}
+	
+	@Test(priority=9)
+	public void groupMenuSearchLinkTest() {
+		homepage=new HomePage();
+		searchPage=new SearchPage();  
+		boolean check = getGDPRCheck(homepage,testUtil);
+		if(check)
+		{
+			testUtil.switchToDefaultContent();
+			searchPage = homepage.validateGroupMenuSearchLink();
+		}
+	}
+	
+	@Test(priority=10)
+	public void groupMenuCareersLinkTest() {
+		homepage=new HomePage();
+		careerPage=new CareersEurofinsPage();  
+		boolean check = getGDPRCheck(homepage,testUtil);
+		if(check)
+		{
+			testUtil.switchToDefaultContent();
+			careerPage = homepage.validateGroupMenuCareersLink();
+		}
+	}
+	
+	@Test(priority=11)
+	public void groupMenuInvestorsLinkTest() {
+		homepage=new HomePage();
+		investerRelation=new InvestorRelationsPage();  
+		boolean check = getGDPRCheck(homepage,testUtil);
+		if(check)
+		{
+			testUtil.switchToDefaultContent();
+			investerRelation = homepage.validateGroupMenuInvestorLink();
+		}
+	}
+	
+	@Test(priority=12)
+	public void groupMenuPressLinkTest() {
+		homepage=new HomePage();
+		safeHarborStatementPage=new SafeHarborStatementPage();  
+		boolean check = getGDPRCheck(homepage,testUtil);
+		if(check)
+		{
+			testUtil.switchToDefaultContent();
+			safeHarborStatementPage = homepage.validateGroupMenuPressLink();
+		}
+	}
+	
+	@Test(priority=13)
+	public void groupMenuContactUsLinkTest() {
+		homepage=new HomePage();
+		contactUs=new ContactUsPage();  
+		boolean check = getGDPRCheck(homepage,testUtil);
+		if(check)
+		{
+			testUtil.switchToDefaultContent();
+			contactUs = homepage.validateGroupMenuContactUsLink();
+		}
+	}
+	
+	@Test(priority=14)
+	public void orangeNavFoodAndFeedTestingLinkTest() {
+		homepage=new HomePage();
+		foodFeedpage=new FoodAndFeedTestingPage();  
+		boolean check = getGDPRCheck(homepage,testUtil);
+		if(check)
+		{
+			testUtil.switchToDefaultContent();
+			foodFeedpage = homepage.validateOrangeNavFoodAndFeedTestingLink();
+		}
+	}
+	
+	@Test(priority=15)
+	public void orangeNavAgroTestingLinkTest() {
+		homepage=new HomePage();
+		agroPage=new AgroPage();  
+		boolean check = getGDPRCheck(homepage,testUtil);
+		if(check)
+		{
+			testUtil.switchToDefaultContent();
+			agroPage = homepage.validateOrangeNavAgroTestingLink();
+		}
+	}
+	
+	@Test(priority=16)
+	public void orangeNavEnvironmentTestingLinkTest() {
+		homepage=new HomePage();
+		envmntPage=new EnvironmentTestingPage();  
+		boolean check = getGDPRCheck(homepage,testUtil);
+		if(check)
+		{
+			testUtil.switchToDefaultContent();
+			envmntPage = homepage.validateOrangeNavEnvironmentTestingLink();
+		}
+	}
+	
+	@Test(priority=17)
+	public void orangeNavMaterialsAndEngineeringSciencesLinkTest() {
+		homepage=new HomePage();
+		materialEngPage=new MaterialsAndEngineeringSciencesPage();  
+		boolean check = getGDPRCheck(homepage,testUtil);
+		if(check)
+		{
+			testUtil.switchToDefaultContent();
+			materialEngPage = homepage.validateOrangeNavMaterialsAndEngineeringSciencesLink();
+		}
+	}
+	
+	@Test(priority=18)
+	public void orangeNavBioPharmaServicesLinkTest() {
+		homepage=new HomePage();
+		biopharmaPage=new BioPharmaServicesPage();  
+		boolean check = getGDPRCheck(homepage,testUtil);
+		if(check)
+		{
+			testUtil.switchToDefaultContent();
+			biopharmaPage = homepage.validateOrangeNavBioPharmaServicesLink();
+		}
+	}
+	
+	@Test(priority=19)
+	public void orangeNavGenomicServicesLinkTest() {
+		homepage=new HomePage();
+		genomicsPage=new GenomicServicesPage();  
+		boolean check = getGDPRCheck(homepage,testUtil);
+		if(check)
+		{
+			testUtil.switchToDefaultContent();
+			genomicsPage = homepage.validateOrangeNavGenomicServicesLink();
+		}
+	}
+	
+	@Test(priority=20)
+	public void orangeNavClinicalDiagnosticsLinkTest() {
+		homepage=new HomePage();
+		clicnicalDiagPage=new ClinicalDiagnosticsPage();  
+		boolean check = getGDPRCheck(homepage,testUtil);
+		if(check)
+		{
+			testUtil.switchToDefaultContent();
+			clicnicalDiagPage=homepage.validateOrangeNavClinicalDiagnosticsLink();
+		}
+	}
+	
+	@Test(priority=21)
+	public void orangeNavTechnologiesLinkTest() {
+		homepage=new HomePage();
+		technoPage=new EurofinsTechnologiesPage();  
+		boolean check = getGDPRCheck(homepage,testUtil);
+		if(check)
+		{
+			testUtil.switchToDefaultContent();
+			technoPage = homepage.validateOrangeNavTechnologiesLink();
+		}
+	}
+	
+	@Test(priority=22)
+	public void orangeNavAgroscienceServicesLinkTest() {
+		homepage=new HomePage();
+		agroSciencePage=new AgroscienceServicesPage();  
+		boolean check = getGDPRCheck(homepage,testUtil);
+		if(check)
+		{
+			testUtil.switchToDefaultContent();
+			agroSciencePage = homepage.validateOrangeNavAgroscienceServicesLink();
+		}
+	}
+	
+	@Test(priority=23)
+	public void orangeNavConsumerProductTestingLinkTest() {
+		homepage=new HomePage();
+		cptPage=new ConsumerProductTestingPage();  
+		boolean check = getGDPRCheck(homepage,testUtil);
+		if(check)
+		{
+			testUtil.switchToDefaultContent();
+			cptPage = homepage.validateOrangeNavConsumerProductTestingLink();
+		}
+	}
+	
+	@Test(priority=24)
+	public void orangeNavForensicServicesLinkTest() {
+		homepage=new HomePage();
+		forensicPage=new ForensicServicesPage();  
+		boolean check = getGDPRCheck(homepage,testUtil);
+		if(check)
+		{
+			testUtil.switchToDefaultContent();
+			forensicPage = homepage.validateOrangeNavForensicServicesLink();
+		}
+	}
+	
+	@Test(priority=25)
+	public void orangeNavCosmeticsAndPersonalCareLinkTest() {
+		homepage=new HomePage();
+		cosmeticPage=new CosmeticsPage();  
+		boolean check = getGDPRCheck(homepage,testUtil);
+		if(check)
+		{
+			testUtil.switchToDefaultContent();
+			cosmeticPage = homepage.validateOrangeNavCosmeticsAndPersonalCareLink();
+		}
+	}
+	
+	@Test(priority=26)
+	public void mainNavOurServicesLinkTest() {
+		homepage=new HomePage();
+		ourServicePage=new OurServicesPage();  
+		boolean check = getGDPRCheck(homepage,testUtil);
+		if(check)
+		{
+			testUtil.switchToDefaultContent();
+			ourServicePage = homepage.validatemainNavOurServicesLink();
+		}
+	}
+	
+	@Test(priority=27)
+	public void mainNavOurServicesAgroscienceServicesLinkTest() {
+		homepage=new HomePage();
+		agroSciencePage=new AgroscienceServicesPage();
+		boolean check = getGDPRCheck(homepage,testUtil);
+		if(check)
+		{
+			testUtil.switchToDefaultContent();
+			agroSciencePage=homepage.validateMainNavOurServicesAgroscienceServicesLink();
+		}
+	}
+	
+	@Test(priority=28)
+	public void mainNavOurServicesAgroLinkTest() {
+		homepage=new HomePage();
+		agroPage=new AgroPage();
+		boolean check = getGDPRCheck(homepage,testUtil);
+		if(check)
+		{
+			testUtil.switchToDefaultContent();
+			agroPage=homepage.validateMainNavOurServicesAgroTestingLink();
+		}
+	}
+	
+	@Test(priority=29)
+	public void mainNavOurServicesAssuranceLinkTest() {
+		homepage=new HomePage();
+		assurancePage=new AssurancePage();
+		boolean check = getGDPRCheck(homepage,testUtil);
+		if(check)
+		{
+			testUtil.switchToDefaultContent();
+			assurancePage=homepage.validateMainNavOurServicesAssuranceLink();
+		}
+	}
+	
+	@Test(priority=30)
+	public void mainNavOurServicesBioPharmaServicesLinkTest() {
+		homepage=new HomePage();
+		biopharmaPage=new BioPharmaServicesPage();
+		boolean check = getGDPRCheck(homepage,testUtil);
+		if(check)
+		{
+			testUtil.switchToDefaultContent();
+			biopharmaPage=homepage.validateMainNavOurServicesBioPharmaServicesLink();
+		}
+	}
+	
+	@Test(priority=31)
+	public void mainNavOurServicesCDMOLinkTest() {
+		homepage=new HomePage();
+		cdmoPage=new ContractDevelopmentManufacturingOrganisationPage();
+		boolean check = getGDPRCheck(homepage,testUtil);
+		if(check)
+		{
+			testUtil.switchToDefaultContent();
+			cdmoPage=homepage.validateMainNavOurServicesCDMOLink();
+		}
+	}
+	
+	@Test(priority=31)
+	public void mainNavOurServicesClinicalDiagnosticsLinkTest() {
+		homepage=new HomePage();
+		clicnicalDiagPage=new ClinicalDiagnosticsPage();
+		boolean check = getGDPRCheck(homepage,testUtil);
+		if(check)
+		{
+			testUtil.switchToDefaultContent();
+			clicnicalDiagPage=homepage.validateMainNavOurServicesClinicalDiagnosticsLink();
+		}
+	}*/
+	
+
+	@Test(priority=30)
+	public void footerBottomLogoTest() {
+		homepage=new HomePage();
+		boolean check = getGDPRCheck(homepage,testUtil);
+		if(check)
+		{
+			testUtil.switchToDefaultContent();
+			boolean footerbotomlogo = homepage.validateFooterLogo();
+			Assert.assertTrue(footerbotomlogo);	
+		}
+	}
+
+	/************************GDPR*********************
+	
+	
+	
+	
+	
+	/**************ReadingJsonFile***************
+	
+	JSONArray jsonObject = GetJsonFile();
+
+	JSONObject json = (JSONObject) jsonObject.get(0);
+
+	JSONObject HomePage = (JSONObject) json.get("HomePage");
+	String title = HomePage.get("title").toString();
+	  /*JSONObject Majornavigations = (JSONObject)HomePage.get("Majornavigations");
+  
+  String Majornavigations1 = Majornavigations.get("Majornavigations1").toString();
+  String Majornavigations2 = Majornavigations.get("Majornavigations2").toString();
+  String Majornavigations3 = Majornavigations.get("Majornavigations3").toString();
+  
+  JSONObject Orangenavigations = (JSONObject)HomePage.get("Orangenavigations");
+  JSONObject Orangenavigations1 = (JSONObject)Orangenavigations.get("Orangenavigations1");
+  JSONObject Orangenavigations2 = (JSONObject)Orangenavigations.get("Orangenavigations2");
+  JSONObject Orangenavigations3 = (JSONObject)Orangenavigations.get("Orangenavigations3");
+  JSONObject Orangenavigations4 = (JSONObject)Orangenavigations.get("Orangenavigations4");
+  JSONObject Orangenavigations5 = (JSONObject)Orangenavigations.get("Orangenavigations5");
+  JSONObject Orangenavigations6 = (JSONObject)Orangenavigations.get("Orangenavigations6");
+  JSONObject Orangenavigations7 = (JSONObject)Orangenavigations.get("Orangenavigations7");
+  JSONObject Orangenavigations8 = (JSONObject)Orangenavigations.get("Orangenavigations8");
+  JSONObject Orangenavigations9 = (JSONObject)Orangenavigations.get("Orangenavigations9");
+  JSONObject Orangenavigations10 = (JSONObject)Orangenavigations.get("Orangenavigations10");
+  JSONObject Orangenavigations11 = (JSONObject)Orangenavigations.get("Orangenavigations11");
+  JSONObject Orangenavigations12 = (JSONObject)Orangenavigations.get("Orangenavigations12");
+	/**************ReadingJsonFile****************/
+	
+	
+	/*************************Dynamic code to get the nav links*****************
+	
+	@Test(priority = 16)
+	public void orangeNavLink3Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException {
+
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations3");
+
+		homepage = new HomePage();
+
+		// to get the id of orange nav link from json --> page6
+		// Page6
+
+		Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+		// Constructor<?> ctr = myClass.getConstructor(String.class);
+		Object page = myClass.newInstance();
+
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			page = homepage.validateOrangeNavLink3();
+
+		}
+		
+		System.out.println("Class" + myClass);
+		System.out.println("Object" + page);
+		System.out.println("Hello" + page);
+		
+		**************************************************/
+		
+		@Test(priority = 1)
+	public void orangeNavLink9Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations9");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateOrangeNavLink9();
+		}
+
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(orangeNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}
+	
+	
+	/***********************************
+	@Test(priority = 15)
+	public void orangeNavLink2Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations2");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateOrangeNavLink2();
+		}
+		
+		System.out.println("Orangenavigations2 --> Class-->" + myClass);
+		System.out.println("Object" + page);
+		System.out.println("Hello" + page);
+	}
+	****************************/
+	
+	@Test(priority = 9)
+	public void orangeNavLink1Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations1");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateOrangeNavLink1();
+		}
+		
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(orangeNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}
+	
+	@Test(priority = 10)
+	public void orangeNavLink2Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations2");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateOrangeNavLink2();
+		}
+		
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(orangeNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}
+	
+	@Test(priority = 11)
+	public void orangeNavLink3Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations3");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateOrangeNavLink3();
+		}
+		
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(orangeNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}
+	
+	@Test(priority = 12)
+	public void orangeNavLink4Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations4");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateOrangeNavLink4();
+		}
+
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(orangeNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}
+	
+	@Test(priority = 13)
+	public void orangeNavLink5Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations5");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateOrangeNavLink5();
+		}
+
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(orangeNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}
+	
+	@Test(priority = 14)
+	public void orangeNavLink6Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations6");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateOrangeNavLink6();
+		}
+
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(orangeNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}
+	
+	
+	@Test(priority = 15)
+	public void orangeNavLink7Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations7");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateOrangeNavLink7();
+		}
+
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(orangeNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}
+	
+	@Test(priority = 16)
+	public void orangeNavLink8Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations8");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateOrangeNavLink8();
+		}
+
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(orangeNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}
+	
+	@Test(priority = 17)
+	public void orangeNavLink9Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations9");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateOrangeNavLink9();
+		}
+
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(orangeNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}
+	
+	@Test(priority = 18)
+	public void orangeNavLink10Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations10");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateOrangeNavLink10();
+		}
+
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(orangeNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}
+	
+	@Test(priority = 19)
+	public void orangeNavLink11Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations11");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateOrangeNavLink11();
+		}
+
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(orangeNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}
+	
+	@Test(priority = 20)
+	public void orangeNavLink12Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations12");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateOrangeNavLink12();
+		}
+
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(orangeNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}
+	
+	@Test(priority = 30)
+	public void footerBottomLogoTest() {
+		homepage = new HomePage();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			boolean footerbotomlogo = homepage.validateFooterLogo();
+			Assert.assertTrue(footerbotomlogo);
+		}
+	}
+	
+	/*******************--------
+	
+	
+	@Test(priority = 9,expectedExceptions = {NullPointerException.class})
+	public void orangeNavLink1Test()
+			throws ClassNotFoundException, NoSuchMethodException, SecurityException, InstantiationException,
+			IllegalAccessException, RuntimeException, ReflectiveOperationException, NullPointerException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations1");
+		if (orangeNavpageID != null) {
+			homepage = new HomePage();
+			Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+			Object page = myClass.newInstance();
+			boolean check = getGDPRCheck(homepage, testUtil);
+			if (check) {
+				testUtil.switchToDefaultContent();
+				homepage.validateOrangeNavLink1();
+			}
+
+			String metaTitle = homepage.validatePageTitle();
+			String pageTitle = getTitleFromPage(orangeNavpageID);
+			Assert.assertTrue(metaTitle.contains(pageTitle));
+		} else {
+			throw new NullPointerException("URL Not found");
+		}
+	}
+	
+	@Test(priority = 10,expectedExceptions = {NullPointerException.class})
+	public void orangeNavLink2Test()
+			throws ClassNotFoundException, NoSuchMethodException, SecurityException, InstantiationException,
+			IllegalAccessException, RuntimeException, ReflectiveOperationException, NullPointerException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations2");
+		if (orangeNavpageID != null) {
+			homepage = new HomePage();
+			Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+			Object page = myClass.newInstance();
+			boolean check = getGDPRCheck(homepage, testUtil);
+			if (check) {
+				testUtil.switchToDefaultContent();
+				homepage.validateOrangeNavLink2();
+			}
+
+			String metaTitle = homepage.validatePageTitle();
+			String pageTitle = getTitleFromPage(orangeNavpageID);
+			Assert.assertTrue(metaTitle.contains(pageTitle));
+		} else {
+			throw new NullPointerException("URL Not found");
+		}
+	}
+	
+	@Test(priority = 11,expectedExceptions = {NullPointerException.class})
+	public void orangeNavLink3Test()
+			throws ClassNotFoundException, NoSuchMethodException, SecurityException, InstantiationException,
+			IllegalAccessException, RuntimeException, ReflectiveOperationException, NullPointerException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations3");
+		if (orangeNavpageID != null) {
+			homepage = new HomePage();
+			Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+			Object page = myClass.newInstance();
+			boolean check = getGDPRCheck(homepage, testUtil);
+			if (check) {
+				testUtil.switchToDefaultContent();
+				homepage.validateOrangeNavLink3();
+			}
+
+			String metaTitle = homepage.validatePageTitle();
+			String pageTitle = getTitleFromPage(orangeNavpageID);
+			Assert.assertTrue(metaTitle.contains(pageTitle));
+		} else {
+			throw new NullPointerException("URL Not found");
+		}
+	}
+	
+	@Test(priority = 12,expectedExceptions = {NullPointerException.class})
+	public void orangeNavLink4Test()
+			throws ClassNotFoundException, NoSuchMethodException, SecurityException, InstantiationException,
+			IllegalAccessException, RuntimeException, ReflectiveOperationException, NullPointerException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations4");
+		if (orangeNavpageID != null) {
+			homepage = new HomePage();
+			Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+			Object page = myClass.newInstance();
+			boolean check = getGDPRCheck(homepage, testUtil);
+			if (check) {
+				testUtil.switchToDefaultContent();
+				homepage.validateOrangeNavLink4();
+			}
+
+			String metaTitle = homepage.validatePageTitle();
+			String pageTitle = getTitleFromPage(orangeNavpageID);
+			Assert.assertTrue(metaTitle.contains(pageTitle));
+		} else {
+			throw new NullPointerException("URL Not found");
+		}
+	}
+	
+	@Test(priority = 13,expectedExceptions = {NullPointerException.class})
+	public void orangeNavLink5Test()
+			throws ClassNotFoundException, NoSuchMethodException, SecurityException, InstantiationException,
+			IllegalAccessException, RuntimeException, ReflectiveOperationException, NullPointerException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations5");
+		if (orangeNavpageID != null) {
+			homepage = new HomePage();
+			Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+			Object page = myClass.newInstance();
+			boolean check = getGDPRCheck(homepage, testUtil);
+			if (check) {
+				testUtil.switchToDefaultContent();
+				homepage.validateOrangeNavLink5();
+			}
+
+			String metaTitle = homepage.validatePageTitle();
+			String pageTitle = getTitleFromPage(orangeNavpageID);
+			Assert.assertTrue(metaTitle.contains(pageTitle));
+		} else {
+			throw new NullPointerException("URL Not found");
+		}
+	}
+	
+	@Test(priority = 14,expectedExceptions = {NullPointerException.class})
+	public void orangeNavLink6Test()
+			throws ClassNotFoundException, NoSuchMethodException, SecurityException, InstantiationException,
+			IllegalAccessException, RuntimeException, ReflectiveOperationException, NullPointerException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations6");
+		if (orangeNavpageID != null) {
+			homepage = new HomePage();
+			Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+			Object page = myClass.newInstance();
+			boolean check = getGDPRCheck(homepage, testUtil);
+			if (check) {
+				testUtil.switchToDefaultContent();
+				homepage.validateOrangeNavLink6();
+			}
+
+			String metaTitle = homepage.validatePageTitle();
+			String pageTitle = getTitleFromPage(orangeNavpageID);
+			Assert.assertTrue(metaTitle.contains(pageTitle));
+		} else {
+			throw new NullPointerException("URL Not found");
+		}
+	}
+	
+	@Test(priority = 15,expectedExceptions = {NullPointerException.class})
+	public void orangeNavLink7Test()
+			throws ClassNotFoundException, NoSuchMethodException, SecurityException, InstantiationException,
+			IllegalAccessException, RuntimeException, ReflectiveOperationException, NullPointerException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations7");
+		if (orangeNavpageID != null) {
+			homepage = new HomePage();
+			Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+			Object page = myClass.newInstance();
+			boolean check = getGDPRCheck(homepage, testUtil);
+			if (check) {
+				testUtil.switchToDefaultContent();
+				homepage.validateOrangeNavLink7();
+			}
+
+			String metaTitle = homepage.validatePageTitle();
+			String pageTitle = getTitleFromPage(orangeNavpageID);
+			Assert.assertTrue(metaTitle.contains(pageTitle));
+		} else {
+			throw new NullPointerException("URL Not found");
+		}
+	}
+	
+	@Test(priority = 16,expectedExceptions = {NullPointerException.class})
+	public void orangeNavLink8Test()
+			throws ClassNotFoundException, NoSuchMethodException, SecurityException, InstantiationException,
+			IllegalAccessException, RuntimeException, ReflectiveOperationException, NullPointerException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations8");
+		if (orangeNavpageID != null) {
+			homepage = new HomePage();
+			Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+			Object page = myClass.newInstance();
+			boolean check = getGDPRCheck(homepage, testUtil);
+			if (check) {
+				testUtil.switchToDefaultContent();
+				homepage.validateOrangeNavLink8();
+			}
+
+			String metaTitle = homepage.validatePageTitle();
+			String pageTitle = getTitleFromPage(orangeNavpageID);
+			Assert.assertTrue(metaTitle.contains(pageTitle));
+		} else {
+			throw new NullPointerException("URL Not found");
+		}
+	}
+	
+	@Test(priority = 17,expectedExceptions = {NullPointerException.class})
+	public void orangeNavLink9Test()
+			throws ClassNotFoundException, NoSuchMethodException, SecurityException, InstantiationException,
+			IllegalAccessException, RuntimeException, ReflectiveOperationException, NullPointerException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations9");
+		if (orangeNavpageID != null) {
+			homepage = new HomePage();
+			Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+			Object page = myClass.newInstance();
+			boolean check = getGDPRCheck(homepage, testUtil);
+			if (check) {
+				testUtil.switchToDefaultContent();
+				homepage.validateOrangeNavLink9();
+			}
+
+			String metaTitle = homepage.validatePageTitle();
+			String pageTitle = getTitleFromPage(orangeNavpageID);
+			Assert.assertTrue(metaTitle.contains(pageTitle));
+		} else {
+			throw new NullPointerException("URL Not found");
+		}
+	}
+	
+	@Test(priority = 18,expectedExceptions = {NullPointerException.class})
+	public void orangeNavLink10Test()
+			throws ClassNotFoundException, NoSuchMethodException, SecurityException, InstantiationException,
+			IllegalAccessException, RuntimeException, ReflectiveOperationException, NullPointerException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations10");
+		if (orangeNavpageID != null) {
+			homepage = new HomePage();
+			Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+			Object page = myClass.newInstance();
+			boolean check = getGDPRCheck(homepage, testUtil);
+			if (check) {
+				testUtil.switchToDefaultContent();
+				homepage.validateOrangeNavLink10();
+			}
+
+			String metaTitle = homepage.validatePageTitle();
+			String pageTitle = getTitleFromPage(orangeNavpageID);
+			Assert.assertTrue(metaTitle.contains(pageTitle));
+		} else {
+			throw new NullPointerException("URL Not found");
+		}
+	}
+	
+	@Test(priority = 19,expectedExceptions = {NullPointerException.class})
+	public void orangeNavLink11Test()
+			throws ClassNotFoundException, NoSuchMethodException, SecurityException, InstantiationException,
+			IllegalAccessException, RuntimeException, ReflectiveOperationException, NullPointerException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations11");
+		if (orangeNavpageID != null) {
+			homepage = new HomePage();
+			Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+			Object page = myClass.newInstance();
+			boolean check = getGDPRCheck(homepage, testUtil);
+			if (check) {
+				testUtil.switchToDefaultContent();
+				homepage.validateOrangeNavLink11();
+			}
+
+			String metaTitle = homepage.validatePageTitle();
+			String pageTitle = getTitleFromPage(orangeNavpageID);
+			Assert.assertTrue(metaTitle.contains(pageTitle));
+		} else {
+			throw new NullPointerException("URL Not found");
+		}
+	}
+	
+	@Test(priority = 20,expectedExceptions = {NullPointerException.class})
+	public void orangeNavLink12Test()
+			throws ClassNotFoundException, NoSuchMethodException, SecurityException, InstantiationException,
+			IllegalAccessException, RuntimeException, ReflectiveOperationException, NullPointerException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations12");
+		if (orangeNavpageID != null) {
+			homepage = new HomePage();
+			Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+			Object page = myClass.newInstance();
+			boolean check = getGDPRCheck(homepage, testUtil);
+			if (check) {
+				testUtil.switchToDefaultContent();
+				homepage.validateOrangeNavLink12();
+			}
+
+			String metaTitle = homepage.validatePageTitle();
+			String pageTitle = getTitleFromPage(orangeNavpageID);
+			Assert.assertTrue(metaTitle.contains(pageTitle));
+		} else {
+			throw new NullPointerException("URL Not found");
+		}
+	}
+	*********************/
+	
+	//Home page Test code************************>>>>>>>>>>>>>>>
+	
+	package com.eurofins.testcases;
+
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
+
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
+
+import org.apache.poi.hwpf.usermodel.OfficeDrawing.HorizontalRelativeElement;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import com.eurofins.base.TestBase;
+import com.eurofins.pages.AgroPage;
+import com.eurofins.pages.AgroscienceServicesPage;
+import com.eurofins.pages.AssurancePage;
+import com.eurofins.pages.BioPharmaServicesPage;
+import com.eurofins.pages.ClinicalDiagnosticsPage;
+import com.eurofins.pages.ConsumerProductTestingPage;
+import com.eurofins.pages.ContractDevelopmentManufacturingOrganisationPage;
+import com.eurofins.pages.CosmeticsPage;
+import com.eurofins.pages.EnvironmentTestingPage;
+import com.eurofins.pages.EurofinsTechnologiesPage;
+import com.eurofins.pages.FoodAndFeedTestingPage;
+import com.eurofins.pages.ForensicServicesPage;
+import com.eurofins.pages.GenomicServicesPage;
+import com.eurofins.pages.HomePage;
+import com.eurofins.pages.InvestorRelationsPage;
+import com.eurofins.pages.MaterialsAndEngineeringSciencesPage;
+import com.eurofins.pages.OurServicesPage;
+import com.eurofins.pages.Page1;
+import com.eurofins.pages.Page2;
+import com.eurofins.pages.Page3;
+import com.eurofins.pages.Page4;
+import com.eurofins.pages.Page5;
+import com.eurofins.pages.Page6;
+import com.eurofins.pages.Page7;
+import com.eurofins.pages.Page8;
+import com.eurofins.pages.Page9;
+import com.eurofins.pages.Page10;
+import com.eurofins.pages.Page11;
+import com.eurofins.pages.Page12;
+import com.eurofins.pages.Page13;
+import com.eurofins.pages.Page14;
+import com.eurofins.pages.Page15;
+import com.eurofins.pages.Page16;
+import com.eurofins.pages.Page17;
+import com.eurofins.pages.Page18;
+
+import com.eurofins.util.TestUtil;
+
+public class HomePageTest extends TestBase {
+
+	HomePage homepage;
+	TestUtil testUtil;
+
+	InvestorRelationsPage investerRelation;
+	FoodAndFeedTestingPage foodFeedpage;
+	AgroPage agroPage;
+	EnvironmentTestingPage envmntPage;
+	MaterialsAndEngineeringSciencesPage materialEngPage;
+	BioPharmaServicesPage biopharmaPage;
+	GenomicServicesPage genomicsPage;
+	ClinicalDiagnosticsPage clicnicalDiagPage;
+	EurofinsTechnologiesPage technoPage;
+	AgroscienceServicesPage agroSciencePage;
+	ConsumerProductTestingPage cptPage;
+	ForensicServicesPage forensicPage;
+	CosmeticsPage cosmeticPage;
+	OurServicesPage ourServicePage;
+	AssurancePage assurancePage;
+	ContractDevelopmentManufacturingOrganisationPage cdmoPage;
+	Page1 pageOne;
+	Page2 pageTwo;
+	Page3 pageThree;
+	Page4 pageFour;
+	Page5 pageFive;
+	Page6 pageSix;
+	Page7 pageSeven;
+	Page8 pageEight;
+	Page9 pageNine;
+	Page10 pageTen;
+	Page11 pageEleven;
+	Page12 pageTewelve;
+	Page13 pageThirteen;
+	Page14 pageFourteen;
+	Page15 pageFifteen;
+	Page16 pageSixsteen;
+	Page17 pageSeventeen;
+	Page18 pageEighteen;
+	
+
+	
+	
+
+	public HomePageTest() {
+		super();
+	}
+	
+//	@BeforeTest
+//	public void loadWebBrowser() {
+//		initialization();
+		
+//	}
+
+	@BeforeMethod
+	public void setUp() {
+	    initialization();
+		testUtil = new TestUtil();
+		// HomePage homepage = new HomePage();
+	}
+	
+	JSONArray jsonObject = GetJsonFile();
+
+	JSONObject json = (JSONObject) jsonObject.get(0);
+
+	JSONObject HomePage = (JSONObject) json.get("HomePage");
+	String title = HomePage.get("title").toString();
+	
+	
+	
+	@Test(priority = 1)
+	public void homePageTitleTest() {
+		homepage = new HomePage();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			String homepageTitle = homepage.validateHomePageTitle();
+			Assert.assertTrue(homepageTitle.contains(title));
+		}
+	}
+
+	@Test(priority = 2)
+	public void homePageLogoTest() {
+		homepage = new HomePage();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			boolean homepagelogo = homepage.validateHomePageLogo();
+			Assert.assertTrue(homepagelogo);
+		}
+	}
+
+//	@Test(priority = 3)
+//	public void firstBlueImageTest() {
+//		homepage = new HomePage();
+//		boolean check = getGDPRCheck(homepage, testUtil);
+//		if (check) {
+//			testUtil.switchToDefaultContent();
+//			boolean firstblueimage = homepage.validateFirstBlueImage();
+//			Assert.assertTrue(firstblueimage);
+//		}
+//	}
+
+	/*@Test(priority = 4)
+	public void secondBlueImageTest() {
+		homepage = new HomePage();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			boolean secondblueimage = homepage.validateSecondBlueImage();
+			Assert.assertTrue(secondblueimage);
+		}
+	}
+
+	@Test(priority = 5)
+	public void thirdBlueImageTest() {
+		homepage = new HomePage();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			boolean thirdblueimage = homepage.validateThirdBlueImage();
+			Assert.assertTrue(thirdblueimage);
+		}
+	}
+	
+	@Test(priority = 6)
+	public void majorNavLink1Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException {
+		String majoreNavpageID = getIDFromJsonFileMajornavigations("Majornavigations1");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + majoreNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateMajorNavigations1Link();
+
+			String metaTitle = homepage.validatePageTitle();
+			String pageTitle = getTitleFromPage(majoreNavpageID);
+			Assert.assertTrue(metaTitle.contains(pageTitle));
+		}
+	}
+	
+	@Test(priority = 7)
+	public void majorNavLink2Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException {
+		String majoreNavpageID = getIDFromJsonFileMajornavigations("Majornavigations2");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + majoreNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateMajornavigations2link();
+
+			String metaTitle = homepage.validatePageTitle();
+			String pageTitle = getTitleFromPage(majoreNavpageID);
+			Assert.assertTrue(metaTitle.contains(pageTitle));
+		}
+	}
+	
+	@Test(priority = 8)
+	public void majorNavLink3Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException {
+		String majoreNavpageID = getIDFromJsonFileMajornavigations("Majornavigations3");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + majoreNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateMajorNavigations3Link();
+
+			String metaTitle = homepage.validatePageTitle();
+			String pageTitle = getTitleFromPage(majoreNavpageID);
+			Assert.assertTrue(metaTitle.contains(pageTitle));
+		}
+	}
+	
+	@Test(priority = 9)
+	public void orangeNavLink1Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations1");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateOrangeNavLink1();
+		}
+		
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(orangeNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}
+	
+	@Test(priority = 10)
+	public void orangeNavLink2Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations2");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateOrangeNavLink2();
+		}
+		
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(orangeNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}
+	
+	@Test(priority = 11)
+	public void orangeNavLink3Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations3");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateOrangeNavLink3();
+		}
+		
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(orangeNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}
+	
+	@Test(priority = 12)
+	public void orangeNavLink4Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations4");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateOrangeNavLink4();
+		}
+
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(orangeNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}*/
+	
+	/*@Test(priority = 13)
+	public void orangeNavLink5Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations5");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateOrangeNavLink5();
+		}
+
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(orangeNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}
+	
+	@Test(priority = 14)
+	public void orangeNavLink6Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations6");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateOrangeNavLink6();
+		}
+
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(orangeNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}
+	
+	
+	@Test(priority = 15)
+	public void orangeNavLink7Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations7");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateOrangeNavLink7();
+		}
+
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(orangeNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}
+	
+	@Test(priority = 16)
+	public void orangeNavLink8Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations8");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateOrangeNavLink8();
+		}
+
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(orangeNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}
+	
+	@Test(priority = 17)
+	public void orangeNavLink9Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations9");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateOrangeNavLink9();
+		}
+
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(orangeNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}
+	
+	@Test(priority = 18)
+	public void orangeNavLink10Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations10");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateOrangeNavLink10();
+		}
+
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(orangeNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}
+	
+	@Test(priority = 19)
+	public void orangeNavLink11Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations11");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateOrangeNavLink11();
+		}
+
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(orangeNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}
+	
+	@Test(priority = 20)
+	public void orangeNavLink12Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations12");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateOrangeNavLink12();
+		}
+
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(orangeNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}
+	
+	
+	
+	
+	@Test(priority = 30)
+	public void footerBottomLogoTest() {
+		homepage = new HomePage();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			boolean footerbotomlogo = homepage.validateFooterLogo();
+			Assert.assertTrue(footerbotomlogo);
+		}
+	}*/
+	
+	/*@Test(priority = 21)
+	public void groupNavLink1Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException {
+		String groupNavpageID = getIDFromJsonFileGroupnavigations("GroupMenunavigations1");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + groupNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateGroupMenuLink1();
+		}
+		
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(groupNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}
+	
+	@Test(priority = 22)
+	public void groupNavLink2Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException {
+		String groupNavpageID = getIDFromJsonFileGroupnavigations("GroupMenunavigations2");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + groupNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateGroupMenuLink2();
+		}
+		
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(groupNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}
+	
+	@Test(priority = 23)
+	public void groupNavLink3Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException {
+		String groupNavpageID = getIDFromJsonFileGroupnavigations("GroupMenunavigations3");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + groupNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateGroupMenuLink3();
+		}
+		
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(groupNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}
+	
+	@Test(priority = 24)
+	public void groupNavLink4Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException {
+		String groupNavpageID = getIDFromJsonFileGroupnavigations("GroupMenunavigations4");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + groupNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateGroupMenuLink4();
+		}
+		
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(groupNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}
+	
+	@Test(priority = 25)
+	public void groupNavLink5Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException {
+		String groupNavpageID = getIDFromJsonFileGroupnavigations("GroupMenunavigations5");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + groupNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateGroupMenuLink5();
+		}
+		
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(groupNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}
+	
+	@Test(priority = 26)
+	public void groupNavLink6Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException {
+		String groupNavpageID = getIDFromJsonFileGroupnavigations("GroupMenunavigations6");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + groupNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateGroupMenuLink6();
+		}
+		
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(groupNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}*/
+	
+	
+	
+	
+	/*@Test(priority = 15)
+	public void orangeNavLink2Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations2");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateOrangeNavLink2();
+		}
+		
+		System.out.println("Orangenavigations2 --> Class-->" + myClass);
+		System.out.println("Object" + page);
+		System.out.println("Hello" + page);
+	}*/
+	
+	
+
+	/*
+	 * 
+	 * 
+	 * @Test(priority=26) public void mainNavOurServicesLinkTest() { homepage=new
+	 * HomePage(); ourServicePage=new OurServicesPage(); boolean check =
+	 * getGDPRCheck(homepage,testUtil); if(check) {
+	 * testUtil.switchToDefaultContent(); ourServicePage =
+	 * homepage.validatemainNavOurServicesLink(); } }
+	 * 
+	 * @Test(priority=27) public void
+	 * mainNavOurServicesAgroscienceServicesLinkTest() { homepage=new HomePage();
+	 * agroSciencePage=new AgroscienceServicesPage(); boolean check =
+	 * getGDPRCheck(homepage,testUtil); if(check) {
+	 * testUtil.switchToDefaultContent();
+	 * agroSciencePage=homepage.validateMainNavOurServicesAgroscienceServicesLink();
+	 * } }
+	 * 
+	 * @Test(priority=28) public void mainNavOurServicesAgroLinkTest() {
+	 * homepage=new HomePage(); agroPage=new AgroPage(); boolean check =
+	 * getGDPRCheck(homepage,testUtil); if(check) {
+	 * testUtil.switchToDefaultContent();
+	 * agroPage=homepage.validateMainNavOurServicesAgroTestingLink(); } }
+	 * 
+	 * @Test(priority=29) public void mainNavOurServicesAssuranceLinkTest() {
+	 * homepage=new HomePage(); assurancePage=new AssurancePage(); boolean check =
+	 * getGDPRCheck(homepage,testUtil); if(check) {
+	 * testUtil.switchToDefaultContent();
+	 * assurancePage=homepage.validateMainNavOurServicesAssuranceLink(); } }
+	 * 
+	 * @Test(priority=30) public void mainNavOurServicesBioPharmaServicesLinkTest()
+	 * { homepage=new HomePage(); biopharmaPage=new BioPharmaServicesPage(); boolean
+	 * check = getGDPRCheck(homepage,testUtil); if(check) {
+	 * testUtil.switchToDefaultContent();
+	 * biopharmaPage=homepage.validateMainNavOurServicesBioPharmaServicesLink(); } }
+	 * 
+	 * @Test(priority=31) public void mainNavOurServicesCDMOLinkTest() {
+	 * homepage=new HomePage(); cdmoPage=new
+	 * ContractDevelopmentManufacturingOrganisationPage(); boolean check =
+	 * getGDPRCheck(homepage,testUtil); if(check) {
+	 * testUtil.switchToDefaultContent();
+	 * cdmoPage=homepage.validateMainNavOurServicesCDMOLink(); } }
+	 * 
+	 * @Test(priority=31) public void
+	 * mainNavOurServicesClinicalDiagnosticsLinkTest() { homepage=new HomePage();
+	 * clicnicalDiagPage=new ClinicalDiagnosticsPage(); boolean check =
+	 * getGDPRCheck(homepage,testUtil); if(check) {
+	 * testUtil.switchToDefaultContent();
+	 * clicnicalDiagPage=homepage.validateMainNavOurServicesClinicalDiagnosticsLink(
+	 * ); } }
+	 
+
+	*/
+
+	@AfterMethod
+	public void tearDown() {
+		driver.quit();
+	}
+}
+
+>>>>>>>>>>>>JSON
+
+public static JSONArray GetJsonFile() {
+		try {
+			String filename ="C:\\Anirudha_Project\\Eurofins_Project\\Selenium_Projects"
+					+ "\\GroupWebSites\\CorporateWebsiteAutomationProd\\src\\main\\java\\com\\eurofins\\config\\json\\eurofinsindia.json";
+			JSONParser jsonParser = new JSONParser();
+			FileReader reader = new FileReader(filename);
+			// Read JSON file
+			Object obj = jsonParser.parse(reader);
+			//JSONObject jsonObject = (JSONObject) obj;
+			JSONArray result = (JSONArray) obj;
+			
+			return result;
+		} catch (FileNotFoundException e) {
+			
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return null;
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			
+			e.printStackTrace();
+			return null;
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return null;
+		}
+		
+	}  
+	
+	>>>>>>>>>>>>>>NullPointer
+	
+	@Test(priority = 10,expectedExceptions = {NullPointerException.class})
+	public void orangeNavLink4Test()
+			throws ClassNotFoundException, NoSuchMethodException, SecurityException, InstantiationException,
+			IllegalAccessException, RuntimeException, ReflectiveOperationException, NullPointerException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations4");
+
+		if (count <= TestBase.orangeNavCount) {
+			if (orangeNavpageID != null) {
+				homepage = new HomePage();
+				Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+				Object page = myClass.newInstance();
+				homepage.validateOrangeNavLink4();
+				String metaTitle = homepage.validatePageTitle();
+				String pageTitle = getTitleFromPage(orangeNavpageID);
+				Assert.assertTrue(metaTitle.contains(pageTitle));
+
+				if (count <= TestBase.orangeNavCount) {
+					count++;
+				}
+				throw new NullPointerException("URL Not found");
+			} else {
+				throw new NullPointerException("URL Not found");
+			}
+		}
+	}
+	
+	>>>>>>>>>>>>>>>>>>>>>>>>To loop for Orange nav
+	
+	@Test(priority = 9)
+	public void orangeNavLink4Test()
+			throws ClassNotFoundException, NoSuchMethodException, SecurityException, InstantiationException,
+			IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations4");
+
+		if (count <= TestBase.orangeNavCount) {
+
+			homepage = new HomePage();
+			Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+			Object page = myClass.newInstance();
+			homepage.validateOrangeNavLink4();
+			String metaTitle = homepage.validatePageTitle();
+			String pageTitle = getTitleFromPage(orangeNavpageID);
+			Assert.assertTrue(metaTitle.contains(pageTitle));
+
+			if (count <= TestBase.orangeNavCount) {
+				count++;
+			}
+		}
+	}
+	
+	
+	<<<<<<<<<<<<<<<<<<<<<<Old Code dont delete
+	
+	@Test(priority = 1)
+	public void orangeNavLink1Test()
+			throws ClassNotFoundException, NoSuchMethodException, SecurityException, InstantiationException,
+			IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		if (orangeNavCount > 0) {
+			orangeNavCount--;
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations1");
+
+		
+
+			homepage = new HomePage();
+			
+			
+			Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+			Object page = myClass.newInstance();
+			
+			homepage.validateOrangeNavLink1();
+			
+			String metaTitle = homepage.validatePageTitle();
+			String pageTitle = getTitleFromPage(orangeNavpageID);
+			Assert.assertTrue(metaTitle.contains(pageTitle));
+			
+		}		
+	}
+
+	
+	@Test(priority = 2)
+	public void orangeNavLink2Test()
+			throws ClassNotFoundException, NoSuchMethodException, SecurityException, InstantiationException,
+			IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		if (orangeNavCount > 0) {
+			orangeNavCount--;
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations2");
+
+		
+
+			homepage = new HomePage();
+			Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+			Object page = myClass.newInstance();
+			homepage.validateOrangeNavLink2();
+			String metaTitle = homepage.validatePageTitle();
+			String pageTitle = getTitleFromPage(orangeNavpageID);
+			Assert.assertTrue(metaTitle.contains(pageTitle));
+
+			
+			//System.out.println("test2" + count);
+		}
+		
+	}
+	
+	/*@Test(priority = 3)
+	public void orangeNavLink3Test()
+			throws ClassNotFoundException, NoSuchMethodException, SecurityException, InstantiationException,
+			IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		if (orangeNavCount > 0) {
+			orangeNavCount--;
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations3");
+
+		
+
+			homepage = new HomePage();
+			Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+			Object page = myClass.newInstance();
+			homepage.validateOrangeNavLink3();
+			String metaTitle = homepage.validatePageTitle();
+			String pageTitle = getTitleFromPage(orangeNavpageID);
+			Assert.assertTrue(metaTitle.contains(pageTitle));
+			
+//			System.out.println(count);
+//			System.out.println("test3" + count);
+
+		}
+		
+	}
+	
+	@Test(priority = 4)
+	public void orangeNavLink4Test()
+			throws ClassNotFoundException, NoSuchMethodException, SecurityException, InstantiationException,
+			IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		if (orangeNavCount > 0) {
+			orangeNavCount--;
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations4	");
+
+		
+
+			homepage = new HomePage();
+			Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+			Object page = myClass.newInstance();
+			homepage.validateOrangeNavLink4();
+			String metaTitle = homepage.validatePageTitle();
+			String pageTitle = getTitleFromPage(orangeNavpageID);
+			Assert.assertTrue(metaTitle.contains(pageTitle));
+
+			
+//			System.out.println(count);
+//			System.out.println("test4" + count);
+		}
+		
+	}
+	
+	@Test(priority = 5)
+	public void orangeNavLink5Test()
+			throws ClassNotFoundException, NoSuchMethodException, SecurityException, InstantiationException,
+			IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		if (orangeNavCount > 0) {
+			orangeNavCount--;
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations5");
+
+		
+
+			homepage = new HomePage();
+			Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+			Object page = myClass.newInstance();
+			homepage.validateOrangeNavLink5();
+			String metaTitle = homepage.validatePageTitle();
+			String pageTitle = getTitleFromPage(orangeNavpageID);
+			Assert.assertTrue(metaTitle.contains(pageTitle));
+
+			
+//			System.out.println(count);
+		}
+		
+	}
+	
+	@Test(priority = 6)
+	public void orangeNavLink6Test()
+			throws ClassNotFoundException, NoSuchMethodException, SecurityException, InstantiationException,
+			IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		if (orangeNavCount > 0) {
+			orangeNavCount--;
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations6");
+
+	
+
+			homepage = new HomePage();
+			Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+			Object page = myClass.newInstance();
+			homepage.validateOrangeNavLink6();
+			String metaTitle = homepage.validatePageTitle();
+			String pageTitle = getTitleFromPage(orangeNavpageID);
+			Assert.assertTrue(metaTitle.contains(pageTitle));		
+		}
+		
+	}
+	
+	@Test(priority = 7)
+	public void orangeNavLink7Test()
+			throws ClassNotFoundException, NoSuchMethodException, SecurityException, InstantiationException,
+			IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		
+		if (orangeNavCount > 0) {
+			orangeNavCount--;
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations7");
+
+		
+
+			homepage = new HomePage();
+			Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+			Object page = myClass.newInstance();
+			homepage.validateOrangeNavLink7();
+			String metaTitle = homepage.validatePageTitle();
+			String pageTitle = getTitleFromPage(orangeNavpageID);
+			Assert.assertTrue(metaTitle.contains(pageTitle));
+
+
+		}
+		
+	}*/
+	
+//	@Test(priority = 10)
+//	public void orangeNavLink1Test()
+//			throws ClassNotFoundException, NoSuchMethodException, SecurityException, InstantiationException,
+//			IllegalAccessException, RuntimeException, ReflectiveOperationException {
+//		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations1");
+//
+//		if (count <= TestBase.orangeNavCount) {
+//			homepage = new HomePage();
+//			Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+//			Object page = myClass.newInstance();
+//			homepage.validateOrangeNavLink1();
+//			String metaTitle = homepage.validatePageTitle();
+//			String pageTitle = getTitleFromPage(orangeNavpageID);
+//			Assert.assertTrue(metaTitle.contains(pageTitle));
+//
+//			count++;
+//		}
+//
+//	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	/*
+	
+	@Test(priority = 9)
+	public void orangeNavLink1Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations1");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateOrangeNavLink1();
+		}
+		
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(orangeNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}
+	
+	@Test(priority = 10)
+	public void orangeNavLink2Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations2");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateOrangeNavLink2();
+		}
+		
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(orangeNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}
+	
+	@Test(priority = 11)
+	public void orangeNavLink3Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations3");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateOrangeNavLink3();
+		}
+		
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(orangeNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}
+	
+	@Test(priority = 12)
+	public void orangeNavLink4Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations4");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateOrangeNavLink4();
+		}
+
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(orangeNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}*/
+	
+	/*@Test(priority = 13)
+	public void orangeNavLink5Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations5");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateOrangeNavLink5();
+		}
+
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(orangeNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}
+	
+	@Test(priority = 14)
+	public void orangeNavLink6Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations6");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateOrangeNavLink6();
+		}
+
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(orangeNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}
+	
+	
+	@Test(priority = 15)
+	public void orangeNavLink7Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations7");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateOrangeNavLink7();
+		}
+
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(orangeNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}
+	
+	@Test(priority = 16)
+	public void orangeNavLink8Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations8");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateOrangeNavLink8();
+		}
+
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(orangeNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}
+	
+	@Test(priority = 17)
+	public void orangeNavLink9Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations9");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateOrangeNavLink9();
+		}
+
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(orangeNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}
+	
+	@Test(priority = 18)
+	public void orangeNavLink10Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations10");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateOrangeNavLink10();
+		}
+
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(orangeNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}
+	
+	@Test(priority = 19)
+	public void orangeNavLink11Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations11");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateOrangeNavLink11();
+		}
+
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(orangeNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}
+	
+	@Test(priority = 20)
+	public void orangeNavLink12Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations12");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateOrangeNavLink12();
+		}
+
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(orangeNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}
+	
+	
+	
+	
+	
+	}*/<<<<<<<<<<<<<<<<<Old code dont delete>>>>>>>>>>>>>>>>>>>
+	
+	
+	<<<<<<<<<<<<<<<<<<<<<Not Delte>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+	
+		/*
+	@Test(priority = 10)
+	public void orangeNavLink2Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		if (orangeNavCount > 0) {
+			orangeNavCount--;
+			String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations2");
+			homepage = new HomePage();
+//			Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+//			Object page = myClass.newInstance();
+			homepage.validateOrangeNavLink2();
+			Set<String> handles = driver.getWindowHandles();
+			if (handles.size()>1) {
+				new TestBase().getNewTabPageTitle();
+				String pageTitle = getTitleFromPage(orangeNavpageID);
+				Assert.assertTrue(TestBase.driverURLChild.contains(pageTitle));
+			}else {
+				String metaTitle = homepage.validatePageTitle();
+				String pageTitle = getTitleFromPage(orangeNavpageID);
+				Assert.assertTrue(metaTitle.contains(pageTitle));
+			}
+		}
+	}
+	
+	@Test(priority = 9)
+	public void orangeNavLink1Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		if (orangeNavCount > 0) {
+			orangeNavCount--;
+			String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations1");
+			homepage = new HomePage();
+			homepage.validateOrangeNavLink1();
+			Set<String> handles = driver.getWindowHandles();
+			if (handles.size() > 1) {
+				new TestBase().getNewTabPageTitle();
+				String pageTitle = getTitleFromPage(orangeNavpageID);
+				Assert.assertTrue(TestBase.driverURLChild.contains(pageTitle));
+			} else {
+				String metaTitle = homepage.validatePageTitle();
+				String pageTitle = getTitleFromPage(orangeNavpageID);
+				Assert.assertTrue(metaTitle.contains(pageTitle));
+			}
+		}
+	}*/
+	
+	/*@Test(priority = 10)
+	public void orangeNavLink2Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		if (orangeNavCount > 0) {
+			orangeNavCount--;
+			String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations2");
+			homepage = new HomePage();
+//			Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+//			Object page = myClass.newInstance();
+			homepage.validateOrangeNavLink2();
+			Set<String> handles = driver.getWindowHandles();
+			if (handles.size()>1) {
+				
+			}
+			String metaTitle = homepage.validatePageTitle();
+			String pageTitle = getTitleFromPage(orangeNavpageID);
+			Assert.assertTrue(metaTitle.contains(pageTitle));
+		}
+	}
+	
+	@Test(priority = 11)
+	public void orangeNavLink3Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		if (orangeNavCount > 0) {
+			orangeNavCount--;
+			String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations3");
+			homepage = new HomePage();
+//			Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+//			Object page = myClass.newInstance();
+			homepage.validateOrangeNavLink3();
+			String metaTitle = homepage.validatePageTitle();
+			String pageTitle = getTitleFromPage(orangeNavpageID);
+			Assert.assertTrue(metaTitle.contains(pageTitle));
+		}
+	}
+	
+	@Test(priority = 12)
+	public void orangeNavLink4Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		if (orangeNavCount > 0) {
+			orangeNavCount--;
+			String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations4");
+			homepage = new HomePage();
+//			Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+//			Object page = myClass.newInstance();
+			homepage.validateOrangeNavLink4();
+			String metaTitle = homepage.validatePageTitle();
+			String pageTitle = getTitleFromPage(orangeNavpageID);
+			Assert.assertTrue(metaTitle.contains(pageTitle));
+		}
+	}
+	
+	@Test(priority = 13)
+	public void orangeNavLink5Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		if (orangeNavCount > 0) {
+			orangeNavCount--;
+			String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations5");
+			homepage = new HomePage();
+//			Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+//			Object page = myClass.newInstance();
+			homepage.validateOrangeNavLink5();
+			String metaTitle = homepage.validatePageTitle();
+			String pageTitle = getTitleFromPage(orangeNavpageID);
+			Assert.assertTrue(metaTitle.contains(pageTitle));
+		}
+	}
+	
+	@Test(priority = 14)
+	public void orangeNavLink6Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		if (orangeNavCount > 0) {
+			orangeNavCount--;
+			String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations6");
+			homepage = new HomePage();
+//			Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+//			Object page = myClass.newInstance();
+			homepage.validateOrangeNavLink6();
+			String metaTitle = homepage.validatePageTitle();
+			String pageTitle = getTitleFromPage(orangeNavpageID);
+			Assert.assertTrue(metaTitle.contains(pageTitle));
+		}
+	}
+	
+	@Test(priority = 15)
+	public void orangeNavLink7Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		if (orangeNavCount > 0) {
+			orangeNavCount--;
+			String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations7");
+			homepage = new HomePage();
+//			Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+//			Object page = myClass.newInstance();
+			homepage.validateOrangeNavLink7();
+			String metaTitle = homepage.validatePageTitle();
+			String pageTitle = getTitleFromPage(orangeNavpageID);
+			Assert.assertTrue(metaTitle.contains(pageTitle));
+		}
+	}
+	
+	@Test(priority = 16)
+	public void orangeNavLink8Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		if (orangeNavCount > 0) {
+			orangeNavCount--;
+			String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations8");
+			homepage = new HomePage();
+//			Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+//			Object page = myClass.newInstance();
+			homepage.validateOrangeNavLink8();
+			String metaTitle = homepage.validatePageTitle();
+			String pageTitle = getTitleFromPage(orangeNavpageID);
+			Assert.assertTrue(metaTitle.contains(pageTitle));
+		}
+	}
+	*/
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	/*@Test(priority = 21)
+	public void groupNavLink1Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException {
+		String groupNavpageID = getIDFromJsonFileGroupnavigations("GroupMenunavigations1");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + groupNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateGroupMenuLink1();
+		}
+		
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(groupNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}
+	
+	@Test(priority = 22)
+	public void groupNavLink2Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException {
+		String groupNavpageID = getIDFromJsonFileGroupnavigations("GroupMenunavigations2");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + groupNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateGroupMenuLink2();
+		}
+		
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(groupNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}
+	
+	@Test(priority = 23)
+	public void groupNavLink3Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException {
+		String groupNavpageID = getIDFromJsonFileGroupnavigations("GroupMenunavigations3");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + groupNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateGroupMenuLink3();
+		}
+		
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(groupNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}
+	
+	@Test(priority = 24)
+	public void groupNavLink4Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException {
+		String groupNavpageID = getIDFromJsonFileGroupnavigations("GroupMenunavigations4");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + groupNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateGroupMenuLink4();
+		}
+		
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(groupNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}
+	
+	@Test(priority = 25)
+	public void groupNavLink5Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException {
+		String groupNavpageID = getIDFromJsonFileGroupnavigations("GroupMenunavigations5");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + groupNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateGroupMenuLink5();
+		}
+		
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(groupNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}
+	
+	@Test(priority = 26)
+	public void groupNavLink6Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException {
+		String groupNavpageID = getIDFromJsonFileGroupnavigations("GroupMenunavigations6");
+		homepage = new HomePage();
+		Class myClass = Class.forName("com.eurofins.pages." + groupNavpageID);
+		Object page = myClass.newInstance();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			homepage.validateGroupMenuLink6();
+		}
+		
+		String metaTitle = homepage.validatePageTitle();
+		String pageTitle = getTitleFromPage(groupNavpageID);
+		Assert.assertTrue(metaTitle.contains(pageTitle));
+	}*/
+	
+	
+	/*@Test(priority = 26)
+	public void mainNavOurServicesLinkTest() {
+		homepage = new HomePage();
+		ourServicePage = new OurServicesPage();
+		boolean check = getGDPRCheck(homepage, testUtil);
+		if (check) {
+			testUtil.switchToDefaultContent();
+			ourServicePage = homepage.validatemainNavOurServicesLink();
+
+		}
+	}
+	*/
+	
+
+	/*
+	 * 
+	 * 
+	 * @Test(priority=26) public void mainNavOurServicesLinkTest() { homepage=new
+	 * HomePage(); ourServicePage=new OurServicesPage(); boolean check =
+	 * getGDPRCheck(homepage,testUtil); if(check) {
+	 * testUtil.switchToDefaultContent(); ourServicePage =
+	 * homepage.validatemainNavOurServicesLink(); } }
+	 * 
+	 * @Test(priority=27) public void
+	 * mainNavOurServicesAgroscienceServicesLinkTest() { homepage=new HomePage();
+	 * agroSciencePage=new AgroscienceServicesPage(); boolean check =
+	 * getGDPRCheck(homepage,testUtil); if(check) {
+	 * testUtil.switchToDefaultContent();
+	 * agroSciencePage=homepage.validateMainNavOurServicesAgroscienceServicesLink();
+	 * } }
+	 * 
+	 * @Test(priority=28) public void mainNavOurServicesAgroLinkTest() {
+	 * homepage=new HomePage(); agroPage=new AgroPage(); boolean check =
+	 * getGDPRCheck(homepage,testUtil); if(check) {
+	 * testUtil.switchToDefaultContent();
+	 * agroPage=homepage.validateMainNavOurServicesAgroTestingLink(); } }
+	 * 
+	 * @Test(priority=29) public void mainNavOurServicesAssuranceLinkTest() {
+	 * homepage=new HomePage(); assurancePage=new AssurancePage(); boolean check =
+	 * getGDPRCheck(homepage,testUtil); if(check) {
+	 * testUtil.switchToDefaultContent();
+	 * assurancePage=homepage.validateMainNavOurServicesAssuranceLink(); } }
+	 * 
+	 * @Test(priority=30) public void mainNavOurServicesBioPharmaServicesLinkTest()
+	 * { homepage=new HomePage(); biopharmaPage=new BioPharmaServicesPage(); boolean
+	 * check = getGDPRCheck(homepage,testUtil); if(check) {
+	 * testUtil.switchToDefaultContent();
+	 * biopharmaPage=homepage.validateMainNavOurServicesBioPharmaServicesLink(); } }
+	 * 
+	 * @Test(priority=31) public void mainNavOurServicesCDMOLinkTest() {
+	 * homepage=new HomePage(); cdmoPage=new
+	 * ContractDevelopmentManufacturingOrganisationPage(); boolean check =
+	 * getGDPRCheck(homepage,testUtil); if(check) {
+	 * testUtil.switchToDefaultContent();
+	 * cdmoPage=homepage.validateMainNavOurServicesCDMOLink(); } }
+	 * 
+	 * @Test(priority=31) public void
+	 * mainNavOurServicesClinicalDiagnosticsLinkTest() { homepage=new HomePage();
+	 * clicnicalDiagPage=new ClinicalDiagnosticsPage(); boolean check =
+	 * getGDPRCheck(homepage,testUtil); if(check) {
+	 * testUtil.switchToDefaultContent();
+	 * clicnicalDiagPage=homepage.validateMainNavOurServicesClinicalDiagnosticsLink(
+	 * ); } }
+	 
+
+	*/
+	
+	<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+	
+	<<<<<<<<<<<<<<<<<Final Code for Main Nav running for corporate>>>>>>>>>>>>>>
+	
+	@Test
+	public void mainNavLink1() {
+		homepage=new HomePage();
+		homepage.validateMainNavLink1();
+		String metaTitle = homepage.validatePageTitle();
+		Assert.assertTrue(metaTitle.contains(mainNav1title));
+	}
+	
+	@Test(priority = 1)
+	public void mainNav1SubNavLink1Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		if (mainMenu1SubMenuCount > 0) {
+			mainMenu1SubMenuCount--;
+			String mainNav1SubNavPageID = getIDFromJsonFileLink1SubLink1("MainNav1SubNavLink1");
+			homepage = new HomePage();
+			// Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+			// Object page = myClass.newInstance();
+			homepage.validateMainNavLink1SubLink1();
+			Set<String> handles = driver.getWindowHandles();
+			if (handles.size() > 1) {
+				new TestBase().getNewTabPageTitle();
+				String pageTitle = getTitleFromPage(mainNav1SubNavPageID);
+				Assert.assertTrue(TestBase.driverURLChild.contains(pageTitle));
+			} else {
+				String metaTitle = homepage.validatePageTitle();
+				String pageTitle = getTitleFromPage(mainNav1SubNavPageID);
+				Assert.assertTrue(metaTitle.contains(pageTitle));
+			}
+		}
+	}
+	
+	@Test(priority = 1)
+	public void mainNav1SubNavLink2Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		if (mainMenu1SubMenuCount > 0) {
+			mainMenu1SubMenuCount--;
+			String mainNav1SubNavPageID = getIDFromJsonFileLink1SubLink1("MainNav1SubNavLink2");
+			homepage = new HomePage();
+			// Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+			// Object page = myClass.newInstance();
+			homepage.validateMainNavLink1SubLink2();
+			Set<String> handles = driver.getWindowHandles();
+			if (handles.size() > 1) {
+				new TestBase().getNewTabPageTitle();
+				String pageTitle = getTitleFromPage(mainNav1SubNavPageID);
+				Assert.assertTrue(TestBase.driverURLChild.contains(pageTitle));
+			} else {
+				String metaTitle = homepage.validatePageTitle();
+				String pageTitle = getTitleFromPage(mainNav1SubNavPageID);
+				Assert.assertTrue(metaTitle.contains(pageTitle));
+			}
+		}
+	}
+	
+	@Test(priority = 1)
+	public void mainNav1SubNavLink3Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		if (mainMenu1SubMenuCount > 0) {
+			mainMenu1SubMenuCount--;
+			String mainNav1SubNavPageID = getIDFromJsonFileLink1SubLink1("MainNav1SubNavLink3");
+			homepage = new HomePage();
+			// Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+			// Object page = myClass.newInstance();
+			homepage.validateMainNavLink1SubLink3();
+			Set<String> handles = driver.getWindowHandles();
+			if (handles.size() > 1) {
+				new TestBase().getNewTabPageTitle();
+				String pageTitle = getTitleFromPage(mainNav1SubNavPageID);
+				Assert.assertTrue(TestBase.driverURLChild.contains(pageTitle));
+			} else {
+				String metaTitle = homepage.validatePageTitle();
+				String pageTitle = getTitleFromPage(mainNav1SubNavPageID);
+				Assert.assertTrue(metaTitle.contains(pageTitle));
+			}
+		}
+	}
+	
+	@Test(priority = 1)
+	public void mainNav1SubNavLink4Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		if (mainMenu1SubMenuCount > 0) {
+			mainMenu1SubMenuCount--;
+			String mainNav1SubNavPageID = getIDFromJsonFileLink1SubLink1("MainNav1SubNavLink4");
+			homepage = new HomePage();
+			// Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+			// Object page = myClass.newInstance();
+			homepage.validateMainNavLink1SubLink4();
+			Set<String> handles = driver.getWindowHandles();
+			if (handles.size() > 1) {
+				new TestBase().getNewTabPageTitle();
+				String pageTitle = getTitleFromPage(mainNav1SubNavPageID);
+				Assert.assertTrue(TestBase.driverURLChild.contains(pageTitle));
+			} else {
+				String metaTitle = homepage.validatePageTitle();
+				String pageTitle = getTitleFromPage(mainNav1SubNavPageID);
+				Assert.assertTrue(metaTitle.contains(pageTitle));
+			}
+		}
+	}
+	
+	@Test(priority = 1)
+	public void mainNav1SubNavLink5Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		if (mainMenu1SubMenuCount > 0) {
+			mainMenu1SubMenuCount--;
+			String mainNav1SubNavPageID = getIDFromJsonFileLink1SubLink1("MainNav1SubNavLink5");
+			homepage = new HomePage();
+			// Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+			// Object page = myClass.newInstance();
+			homepage.validateMainNavLink1SubLink5();
+			Set<String> handles = driver.getWindowHandles();
+			if (handles.size() > 1) {
+				new TestBase().getNewTabPageTitle();
+				String pageTitle = getTitleFromPage(mainNav1SubNavPageID);
+				Assert.assertTrue(TestBase.driverURLChild.contains(pageTitle));
+			} else {
+				String metaTitle = homepage.validatePageTitle();
+				String pageTitle = getTitleFromPage(mainNav1SubNavPageID);
+				Assert.assertTrue(metaTitle.contains(pageTitle));
+			}
+		}
+	}
+	
+	@Test(priority = 1)
+	public void mainNav1SubNavLink6Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		if (mainMenu1SubMenuCount > 0) {
+			mainMenu1SubMenuCount--;
+			String mainNav1SubNavPageID = getIDFromJsonFileLink1SubLink1("MainNav1SubNavLink6");
+			homepage = new HomePage();
+			// Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+			// Object page = myClass.newInstance();
+			homepage.validateMainNavLink1SubLink6();
+			Set<String> handles = driver.getWindowHandles();
+			if (handles.size() > 1) {
+				new TestBase().getNewTabPageTitle();
+				String pageTitle = getTitleFromPage(mainNav1SubNavPageID);
+				Assert.assertTrue(TestBase.driverURLChild.contains(pageTitle));
+			} else {
+				String metaTitle = homepage.validatePageTitle();
+				String pageTitle = getTitleFromPage(mainNav1SubNavPageID);
+				Assert.assertTrue(metaTitle.contains(pageTitle));
+			}
+		}
+	}
+	
+	@Test(priority = 1)
+	public void mainNav1SubNavLink7Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		if (mainMenu1SubMenuCount > 0) {
+			mainMenu1SubMenuCount--;
+			String mainNav1SubNavPageID = getIDFromJsonFileLink1SubLink1("MainNav1SubNavLink7");
+			homepage = new HomePage();
+			// Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+			// Object page = myClass.newInstance();
+			homepage.validateMainNavLink1SubLink7();
+			Set<String> handles = driver.getWindowHandles();
+			if (handles.size() > 1) {
+				new TestBase().getNewTabPageTitle();
+				String pageTitle = getTitleFromPage(mainNav1SubNavPageID);
+				Assert.assertTrue(TestBase.driverURLChild.contains(pageTitle));
+			} else {
+				String metaTitle = homepage.validatePageTitle();
+				String pageTitle = getTitleFromPage(mainNav1SubNavPageID);
+				Assert.assertTrue(metaTitle.contains(pageTitle));
+			}
+		}
+	}
+	
+	@Test(priority = 1)
+	public void mainNav1SubNavLink8Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		if (mainMenu1SubMenuCount > 0) {
+			mainMenu1SubMenuCount--;
+			String mainNav1SubNavPageID = getIDFromJsonFileLink1SubLink1("MainNav1SubNavLink8");
+			homepage = new HomePage();
+			// Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+			// Object page = myClass.newInstance();
+			homepage.validateMainNavLink1SubLink8();
+			Set<String> handles = driver.getWindowHandles();
+			if (handles.size() > 1) {
+				new TestBase().getNewTabPageTitle();
+				String pageTitle = getTitleFromPage(mainNav1SubNavPageID);
+				Assert.assertTrue(TestBase.driverURLChild.contains(pageTitle));
+			} else {
+				String metaTitle = homepage.validatePageTitle();
+				String pageTitle = getTitleFromPage(mainNav1SubNavPageID);
+				Assert.assertTrue(metaTitle.contains(pageTitle));
+			}
+		}
+	}
+	
+	@Test(priority = 1)
+	public void mainNav1SubNavLink9Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		if (mainMenu1SubMenuCount > 0) {
+			mainMenu1SubMenuCount--;
+			String mainNav1SubNavPageID = getIDFromJsonFileLink1SubLink1("MainNav1SubNavLink9");
+			homepage = new HomePage();
+			// Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+			// Object page = myClass.newInstance();
+			homepage.validateMainNavLink1SubLink9();
+			Set<String> handles = driver.getWindowHandles();
+			if (handles.size() > 1) {
+				new TestBase().getNewTabPageTitle();
+				String pageTitle = getTitleFromPage(mainNav1SubNavPageID);
+				Assert.assertTrue(TestBase.driverURLChild.contains(pageTitle));
+			} else {
+				String metaTitle = homepage.validatePageTitle();
+				String pageTitle = getTitleFromPage(mainNav1SubNavPageID);
+				Assert.assertTrue(metaTitle.contains(pageTitle));
+			}
+		}
+	}
+	
+	@Test(priority = 1)
+	public void mainNav1SubNavLink10Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		if (mainMenu1SubMenuCount > 0) {
+			mainMenu1SubMenuCount--;
+			String mainNav1SubNavPageID = getIDFromJsonFileLink1SubLink1("MainNav1SubNavLink10");
+			homepage = new HomePage();
+			// Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+			// Object page = myClass.newInstance();
+			homepage.validateMainNavLink1SubLink10();
+			Set<String> handles = driver.getWindowHandles();
+			if (handles.size() > 1) {
+				new TestBase().getNewTabPageTitle();
+				String pageTitle = getTitleFromPage(mainNav1SubNavPageID);
+				Assert.assertTrue(TestBase.driverURLChild.contains(pageTitle));
+			} else {
+				String metaTitle = homepage.validatePageTitle();
+				String pageTitle = getTitleFromPage(mainNav1SubNavPageID);
+				Assert.assertTrue(metaTitle.contains(pageTitle));
+			}
+		}
+	}
+	
+	@Test(priority = 1)
+	public void mainNav1SubNavLink11Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		if (mainMenu1SubMenuCount > 0) {
+			mainMenu1SubMenuCount--;
+			String mainNav1SubNavPageID = getIDFromJsonFileLink1SubLink1("MainNav1SubNavLink11");
+			homepage = new HomePage();
+			// Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+			// Object page = myClass.newInstance();
+			homepage.validateMainNavLink1SubLink11();
+			Set<String> handles = driver.getWindowHandles();
+			if (handles.size() > 1) {
+				new TestBase().getNewTabPageTitle();
+				String pageTitle = getTitleFromPage(mainNav1SubNavPageID);
+				Assert.assertTrue(TestBase.driverURLChild.contains(pageTitle));
+			} else {
+				String metaTitle = homepage.validatePageTitle();
+				String pageTitle = getTitleFromPage(mainNav1SubNavPageID);
+				Assert.assertTrue(metaTitle.contains(pageTitle));
+			}
+		}
+	}
+	
+	@Test(priority = 1)
+	public void mainNav1SubNavLink12Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		if (mainMenu1SubMenuCount > 0) {
+			mainMenu1SubMenuCount--;
+			String mainNav1SubNavPageID = getIDFromJsonFileLink1SubLink1("MainNav1SubNavLink12");
+			homepage = new HomePage();
+			// Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+			// Object page = myClass.newInstance();
+			homepage.validateMainNavLink1SubLink12();
+			Set<String> handles = driver.getWindowHandles();
+			if (handles.size() > 1) {
+				new TestBase().getNewTabPageTitle();
+				String pageTitle = getTitleFromPage(mainNav1SubNavPageID);
+				Assert.assertTrue(TestBase.driverURLChild.contains(pageTitle));
+			} else {
+				String metaTitle = homepage.validatePageTitle();
+				String pageTitle = getTitleFromPage(mainNav1SubNavPageID);
+				Assert.assertTrue(metaTitle.contains(pageTitle));
+			}
+		}
+	}
+	
+	@Test(priority = 1)
+	public void mainNav1SubNavLink13Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		if (mainMenu1SubMenuCount > 0) {
+			mainMenu1SubMenuCount--;
+			String mainNav1SubNavPageID = getIDFromJsonFileLink1SubLink1("MainNav1SubNavLink13");
+			homepage = new HomePage();
+			// Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+			// Object page = myClass.newInstance();
+			homepage.validateMainNavLink1SubLink13();
+			Set<String> handles = driver.getWindowHandles();
+			if (handles.size() > 1) {
+				new TestBase().getNewTabPageTitle();
+				String pageTitle = getTitleFromPage(mainNav1SubNavPageID);
+				Assert.assertTrue(TestBase.driverURLChild.contains(pageTitle));
+			} else {
+				String metaTitle = homepage.validatePageTitle();
+				String pageTitle = getTitleFromPage(mainNav1SubNavPageID);
+				Assert.assertTrue(metaTitle.contains(pageTitle));
+			}
+		}
+	}
+	
+	@Test(priority = 1)
+	public void mainNav1SubNavLink14Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		if (mainMenu1SubMenuCount > 0) {
+			mainMenu1SubMenuCount--;
+			String mainNav1SubNavPageID = getIDFromJsonFileLink1SubLink1("MainNav1SubNavLink14");
+			homepage = new HomePage();
+			// Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+			// Object page = myClass.newInstance();
+			homepage.validateMainNavLink1SubLink14();
+			Set<String> handles = driver.getWindowHandles();
+			if (handles.size() > 1) {
+				new TestBase().getNewTabPageTitle();
+				String pageTitle = getTitleFromPage(mainNav1SubNavPageID);
+				Assert.assertTrue(TestBase.driverURLChild.contains(pageTitle));
+			} else {
+				String metaTitle = homepage.validatePageTitle();
+				String pageTitle = getTitleFromPage(mainNav1SubNavPageID);
+				Assert.assertTrue(metaTitle.contains(pageTitle));
+			}
+		}
+	}
+	
+	@Test(priority = 1)
+	public void mainNav1SubNavLink15Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		if (mainMenu1SubMenuCount > 0) {
+			mainMenu1SubMenuCount--;
+			String mainNav1SubNavPageID = getIDFromJsonFileLink1SubLink1("MainNav1SubNavLink15");
+			homepage = new HomePage();
+			// Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+			// Object page = myClass.newInstance();
+			homepage.validateMainNavLink1SubLink15();
+			Set<String> handles = driver.getWindowHandles();
+			if (handles.size() > 1) {
+				new TestBase().getNewTabPageTitle();
+				String pageTitle = getTitleFromPage(mainNav1SubNavPageID);
+				Assert.assertTrue(TestBase.driverURLChild.contains(pageTitle));
+			} else {
+				String metaTitle = homepage.validatePageTitle();
+				String pageTitle = getTitleFromPage(mainNav1SubNavPageID);
+				Assert.assertTrue(metaTitle.contains(pageTitle));
+			}
+		}
+	}
+	
+	@Test(priority = 1)
+	public void mainNav1SubNavLink16Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		if (mainMenu1SubMenuCount > 0) {
+			mainMenu1SubMenuCount--;
+			String mainNav1SubNavPageID = getIDFromJsonFileLink1SubLink1("MainNav1SubNavLink16");
+			homepage = new HomePage();
+			// Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+			// Object page = myClass.newInstance();
+			homepage.validateMainNavLink1SubLink16();
+			Set<String> handles = driver.getWindowHandles();
+			if (handles.size() > 1) {
+				new TestBase().getNewTabPageTitle();
+				String pageTitle = getTitleFromPage(mainNav1SubNavPageID);
+				Assert.assertTrue(TestBase.driverURLChild.contains(pageTitle));
+			} else {
+				String metaTitle = homepage.validatePageTitle();
+				String pageTitle = getTitleFromPage(mainNav1SubNavPageID);
+				Assert.assertTrue(metaTitle.contains(pageTitle));
+			}
+		}
+	}
+	
+	@Test(priority = 1)
+	public void mainNav1SubNavLink17Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		if (mainMenu1SubMenuCount > 0) {
+			mainMenu1SubMenuCount--;
+			String mainNav1SubNavPageID = getIDFromJsonFileLink1SubLink1("MainNav1SubNavLink17");
+			homepage = new HomePage();
+			// Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+			// Object page = myClass.newInstance();
+			homepage.validateMainNavLink1SubLink17();
+			Set<String> handles = driver.getWindowHandles();
+			if (handles.size() > 1) {
+				new TestBase().getNewTabPageTitle();
+				String pageTitle = getTitleFromPage(mainNav1SubNavPageID);
+				Assert.assertTrue(TestBase.driverURLChild.contains(pageTitle));
+			} else {
+				String metaTitle = homepage.validatePageTitle();
+				String pageTitle = getTitleFromPage(mainNav1SubNavPageID);
+				Assert.assertTrue(metaTitle.contains(pageTitle));
+			}
+		}
+	}
+	
+	@Test(priority = 1)
+	public void mainNav1SubNavLink18Test() throws ClassNotFoundException, NoSuchMethodException, SecurityException,
+			InstantiationException, IllegalAccessException, RuntimeException, ReflectiveOperationException {
+		if (mainMenu1SubMenuCount > 0) {
+			mainMenu1SubMenuCount--;
+			String mainNav1SubNavPageID = getIDFromJsonFileLink1SubLink1("MainNav1SubNavLink18");
+			homepage = new HomePage();
+			// Class myClass = Class.forName("com.eurofins.pages." + orangeNavpageID);
+			// Object page = myClass.newInstance();
+			homepage.validateMainNavLink1SubLink18();
+			Set<String> handles = driver.getWindowHandles();
+			if (handles.size() > 1) {
+				new TestBase().getNewTabPageTitle();
+				String pageTitle = getTitleFromPage(mainNav1SubNavPageID);
+				Assert.assertTrue(TestBase.driverURLChild.contains(pageTitle));
+			} else {
+				String metaTitle = homepage.validatePageTitle();
+				String pageTitle = getTitleFromPage(mainNav1SubNavPageID);
+				Assert.assertTrue(metaTitle.contains(pageTitle));
+			}
+		}
+	}
+	
+	<<<<<<<<<<<<<<<<<<<<<<<Code for main nave running for corporate>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+	
+	
+	<<<<<<<<<<<<<<<<<<<<<<The following example allows you to extract all valid links from a webpage.
+	 It does not consider links which start with "javascript:" or "mailto:". >>>>>>>>>>>>>>>>>>>>>>>>>
+	
+	package de.vogella.regex.weblinks;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class LinkGetter {
+    private Pattern htmltag;
+    private Pattern link;
+
+    public LinkGetter() {
+        htmltag = Pattern.compile("<a\\b[^>]*href=\"[^>]*>(.*?)</a>");
+        link = Pattern.compile("href=\"[^>]*\">");
+    }
+
+    public List<String> getLinks(String url) {
+        List<String> links = new ArrayList<String>();
+        try {
+            BufferedReader bufferedReader = new BufferedReader(
+                    new InputStreamReader(new URL(url).openStream()));
+            String s;
+            StringBuilder builder = new StringBuilder();
+            while ((s = bufferedReader.readLine()) != null) {
+                builder.append(s);
+            }
+
+            Matcher tagmatch = htmltag.matcher(builder.toString());
+            while (tagmatch.find()) {
+                Matcher matcher = link.matcher(tagmatch.group());
+                matcher.find();
+                String link = matcher.group().replaceFirst("href=\"", "")
+                        .replaceFirst("\">", "")
+                        .replaceFirst("\"[\\s]?target=\"[a-zA-Z_0-9]*", "");
+                if (valid(link)) {
+                    links.add(makeAbsolute(url, link));
+                }
+            }
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return links;
+    }
+
+    private boolean valid(String s) {
+        if (s.matches("javascript:.*|mailto:.*")) {
+            return false;
+        }
+        return true;
+    }
+
+    private String makeAbsolute(String url, String link) {
+        if (link.matches("http://.*")) {
+            return link;
+        }
+        if (link.matches("/.*") && url.matches(".*$[^/]")) {
+            return url + "/" + link;
+        }
+        if (link.matches("[^/].*") && url.matches(".*[^/]")) {
+            return url + "/" + link;
+        }
+        if (link.matches("/.*") && url.matches(".*[/]")) {
+            return url + link;
+        }
+        if (link.matches("/.*") && url.matches(".*[^/]")) {
+            return url + link;
+        }
+        throw new RuntimeException("Cannot make the link absolute. Url: " + url
+                + " Link " + link);
+    }
+}
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<Ends>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+<<<<<<<<<<<<<<<<<<<<<<It is quite easy to find all the links from a page and it is
+ quite useful in Automation testing. As there will be situations when you want to count all 
+ the links from a webpage or to check that none of the links on the webpage are throwing 
+ ‘Page not Found‘ errors or there can be a situation when you drive your test through the links present on the web page.
+
+Step to follow…
+
+1) Navigate to the interested webpage for e.g. www.toolsqa.com.
+
+2) Create a list of type WebElement to store all the Link elements into it.
+
+3) Collect all the links from the webpage. All the links are associated with the Tag ‘a‘.
+
+4) Now iterate through every link and print the Link Text on the console screen.>>>>>>>>>>>>>>>>>>>>>>>
+
+package practiceTestCases;
+
+import org.openqa.selenium.By;
+
+import org.openqa.selenium.WebDriver;
+
+import org.openqa.selenium.WebElement;
+
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class FindAllLinks {
+
+	public static void main(String[] args) {
+
+		WebDriver driver = new FirefoxDriver();
+
+		driver.get("http://toolsqa.com/");
+
+		java.util.List<WebElement> links = driver.findElements(By.tagName("a"));
+
+		System.out.println(links.size());
+
+		for (int i = 1; i<=links.size(); i=i+1)
+
+		{
+
+			System.out.println(links.get(i).getText());
+
+		}
+
+	}
+
+}
+
+
+<<<<<<<<<<<<<<<<<<<<<,Code to Find the Broken links on a webpage>>>>>>>>>>>>>>>>>
+
+package automationPractice;
+
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.Iterator;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class BrokenLinks {
+    
+    private static WebDriver driver = null;
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        
+        String homePage = "http://www.zlti.com";
+        String url = "";
+        HttpURLConnection huc = null;
+        int respCode = 200;
+        
+        driver = new ChromeDriver();
+        
+        driver.manage().window().maximize();
+        
+        driver.get(homePage);
+        
+        List<WebElement> links = driver.findElements(By.tagName("a"));
+        
+        Iterator<WebElement> it = links.iterator();
+        
+        while(it.hasNext()){
+            
+            url = it.next().getAttribute("href");
+            
+            System.out.println(url);
+        
+            if(url == null || url.isEmpty()){
+System.out.println("URL is either not configured for anchor tag or it is empty");
+                continue;
+            }
+            
+            if(!url.startsWith(homePage)){
+                System.out.println("URL belongs to another domain, skipping it.");
+                continue;
+            }
+            
+            try {
+                huc = (HttpURLConnection)(new URL(url).openConnection());
+                
+                huc.setRequestMethod("HEAD");
+                
+                huc.connect();
+                
+                respCode = huc.getResponseCode();
+                
+                if(respCode >= 400){
+                    System.out.println(url+" is a broken link");
+                }
+                else{
+                    System.out.println(url+" is a valid link");
+                }
+                    
+            } catch (MalformedURLException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+        }
+        
+        driver.quit();
+
+    }
+}
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<End>>>>>>>>>>>>>>>>>>>>>>>>
+
+<<<<<<<<<<<<<The WebDriver code below checks each link from the Mercury Tours homepage
+ to determine those that are working and those that are still under construction.>>>>>>>>>>>>>.
+ 
+ import org.openqa.selenium.By;		
+import org.openqa.selenium.WebDriver;		
+import org.openqa.selenium.chrome.ChromeDriver;		
+import java.util.List;		
+import java.util.concurrent.TimeUnit;		
+import org.openqa.selenium.*;		
+
+public class P1 {				
+    		
+    public static void main(String[] args) {									
+        String baseUrl = "http://demo.guru99.com/test/newtours/";					
+        System.setProperty("webdriver.chrome.driver","G:\\chromedriver.exe");					
+        WebDriver driver = new ChromeDriver();					
+        		
+        String underConsTitle = "Under Construction: Mercury Tours";					
+			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);					
+
+			driver.get(baseUrl);					
+        List<WebElement> linkElements = driver.findElements(By.tagName("a"));							
+        String[] linkTexts = new String[linkElements.size()];							
+			int					i = 0;					
+
+			//extract the link texts of each link element		
+			for (WebElement e : linkElements) {							
+			linkTexts[i] = e.getText();							
+			i++;			
+        }		
+
+			//test each link		
+			for (String t : linkTexts) {							
+			driver.findElement(By.linkText(t)).click();					
+			if (driver.getTitle().equals(underConsTitle)) {							
+                System.out.println("\"" + t + "\""								
+                        + " is under construction.");			
+            } else {			
+                System.out.println("\"" + t + "\""								
+                        + " is working.");			
+            }		
+			driver.navigate().back();			
+        }		
+			driver.quit();			
+    }		
+}
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<Ends>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+<<<<<<<<<<<<<<<<<<<ORANGENAV1 CODE>>>>>>>>>>>>>>>>...
+
+//	@Test
+//	public void imageTest() throws Exception {
+//		// driver.get(baseUrl);
+//		WebElement ImageFile = driver.findElement(By.xpath("//img[contains(@id,'Test Image')]"));
+//
+//		Boolean ImagePresent = (Boolean) ((JavascriptExecutor) driver).executeScript(
+//				"return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0",
+//				ImageFile);
+//		if (!ImagePresent) {
+//			System.out.println("Image not displayed.");
+//		} else {
+//			System.out.println("Image displayed.");
+//		}
+//	}
+
+//	@Test(priority=1)
+//	public void orangeNav1HyperlinkTest() {
+//		if (orangeNavCount > 0) {
+//			orangeNavCount--;
+//			String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations1");
+//			String pageUrl = getUrlFromPage(orangeNavpageID);
+//			homepage = new HomePage();
+//			obj = new OrangeNavigationClickPageTest();
+//			homepage.validateOrangeNavLink1();
+//			boolean value = obj.hyperLinkTest(pageUrl);
+//			Assert.assertTrue(value);
+//		}
+//	}
+	
+//	@Test(priority = 2)
+//	public void orangeNav2HyperlinkTest() {
+//		if (orangeNavCount > 0) {
+//			orangeNavCount--;
+//			String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations2");
+//			String pageUrl = getUrlFromPage(orangeNavpageID);
+//			homepage = new HomePage();
+//			homepage.validateOrangeNavLink2();
+//			LinkedHashSet<String> handles = (LinkedHashSet<String>) driver.getWindowHandles();
+//			if (handles.size() > 1) {
+//				Iterator<String> it = handles.iterator();
+//				String parent = it.next();
+//				String child = it.next();
+//				// switch to child
+//				driver.switchTo().window(child);
+//				boolean value = obj.hyperLinkTest(pageUrl);
+//				Assert.assertTrue(value);
+//			}
+//			// driver.switchTo().window(win)
+//			else {
+//				boolean value = obj.hyperLinkTest(pageUrl);
+//				Assert.assertTrue(value);
+//			}
+//		}
+//	}
+	
+	
+//	@Test(priority = 3)
+//	public void orangeNav3HyperlinkTest() {
+//		if (orangeNavCount > 0) {
+//			orangeNavCount--;
+//			String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations3");
+//			String pageUrl = getUrlFromPage(orangeNavpageID);
+//			homepage = new HomePage();
+//			homepage.validateOrangeNavLink3();
+//			LinkedHashSet<String> handles = (LinkedHashSet<String>) driver.getWindowHandles();
+//			if (handles.size() > 1) {
+//				Iterator<String> it = handles.iterator();
+//				String parent = it.next();
+//				String child = it.next();
+//				// switch to child
+//				driver.switchTo().window(child);
+//				boolean value = obj.hyperLinkTest(pageUrl);
+//				Assert.assertTrue(value);
+//			}
+//			// driver.switchTo().window(win)
+//			else {
+//				boolean value = obj.hyperLinkTest(pageUrl);
+//				Assert.assertTrue(value);
+//			}
+//		}
+//	}
+	
+	@Test(priority = 3)
+	public void orangeNav6HyperlinkTest() {
+		if (orangeNavCount > 0) {
+			orangeNavCount--;
+			String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations6");
+			String pageUrl = getUrlFromPage(orangeNavpageID);
+			homepage = new HomePage();
+			homepage.validateOrangeNavLink6();
+			LinkedHashSet<String> handles = (LinkedHashSet<String>) driver.getWindowHandles();
+			if (handles.size() > 1) {
+				Iterator<String> it = handles.iterator();
+				String parent = it.next();
+				String child = it.next();
+				// switch to child
+				driver.switchTo().window(child);
+				boolean value = obj.hyperLinkTest(pageUrl);
+				Assert.assertTrue(value);
+			}
+			// driver.switchTo().window(win)
+			else {
+				boolean value = obj.hyperLinkTest(pageUrl);
+				Assert.assertTrue(value);
+			}
+		}
+	}
+	
+	
+	
+//	@Test(priority = 3)
+//	public void orangeNav3HyperlinkTest() {
+//		if (orangeNavCount > 0) {
+//			orangeNavCount--;
+//			String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations3");
+//			String pageUrl = getUrlFromPage(orangeNavpageID);
+//			homepage = new HomePage();
+//			homepage.validateOrangeNavLink3();
+//			boolean value = obj.hyperLinkTest(pageUrl);
+//			Assert.assertTrue(value);
+//		}
+//	}
+	
+//	@Test(priority = 4)
+//	public void orangeNav4HyperlinkTest() {
+//		if (orangeNavCount > 0) {
+//			orangeNavCount--;
+//			String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations4");
+//			String pageUrl = getUrlFromPage(orangeNavpageID);
+//			homepage = new HomePage();
+//			homepage.validateOrangeNavLink4();
+//			boolean value = obj.hyperLinkTest(pageUrl);
+//			Assert.assertTrue(value);
+//		}
+//	}
+//	
+//	@Test(priority = 5)
+//	public void orangeNav5HyperlinkTest() {
+//		if (orangeNavCount > 0) {
+//			orangeNavCount--;
+//			String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations5");
+//			String pageUrl = getUrlFromPage(orangeNavpageID);
+//			homepage = new HomePage();
+//			homepage.validateOrangeNavLink5();
+//			boolean value = obj.hyperLinkTest(pageUrl);
+//			Assert.assertTrue(value);
+//		}
+//	}
+	
+//	@Test(priority = 6)
+//	public void orangeNav6HyperlinkTest() {
+//		if (orangeNavCount > 0) {
+//			orangeNavCount--;
+//			String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations6");
+//			String pageUrl = getUrlFromPage(orangeNavpageID);
+//			homepage = new HomePage();
+//			homepage.validateOrangeNavLink6();
+//			boolean value = obj.hyperLinkTest(pageUrl);
+//			Assert.assertTrue(value);
+//		}
+//	}
+	
+//	@Test(priority = 7)
+//	public void orangeNav7HyperlinkTest() {
+//		if (orangeNavCount > 0) {
+//			orangeNavCount--;
+//			String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations7");
+//			String pageUrl = getUrlFromPage(orangeNavpageID);
+//			homepage = new HomePage();
+//			homepage.validateOrangeNavLink7();
+//			boolean value = obj.hyperLinkTest(pageUrl);
+//			Assert.assertTrue(value);
+//		}
+//	}
+//	
+//	@Test(priority = 8)
+//	public void orangeNav8HyperlinkTest() {
+//		if (orangeNavCount > 0) {
+//			orangeNavCount--;
+//			String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations8");
+//			String pageUrl = getUrlFromPage(orangeNavpageID);
+//			homepage = new HomePage();
+//			homepage.validateOrangeNavLink8();
+//			boolean value = obj.hyperLinkTest(pageUrl);
+//			Assert.assertTrue(value);
+//		}
+//	}
+//	
+//	@Test(priority = 9)
+//	public void orangeNav9HyperlinkTest() {
+//		if (orangeNavCount > 0) {
+//			orangeNavCount--;
+//			String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations9");
+//			String pageUrl = getUrlFromPage(orangeNavpageID);
+//			homepage = new HomePage();
+//			homepage.validateOrangeNavLink9();
+//			boolean value = obj.hyperLinkTest(pageUrl);
+//			Assert.assertTrue(value);
+//		}
+//	}
+//	
+//	@Test(priority = 10)
+//	public void orangeNav10HyperlinkTest() {
+//		if (orangeNavCount > 0) {
+//			orangeNavCount--;
+//			String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations10");
+//			String pageUrl = getUrlFromPage(orangeNavpageID);
+//			homepage = new HomePage();
+//			homepage.validateOrangeNavLink10();
+//			boolean value = obj.hyperLinkTest(pageUrl);
+//			Assert.assertTrue(value);
+//		}
+//	}
+//	
+//	@Test(priority = 11)
+//	public void orangeNav11HyperlinkTest() {
+//		if (orangeNavCount > 0) {
+//			orangeNavCount--;
+//			String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations11");
+//			String pageUrl = getUrlFromPage(orangeNavpageID);
+//			homepage = new HomePage();
+//			homepage.validateOrangeNavLink11();
+//			boolean value = obj.hyperLinkTest(pageUrl);
+//			Assert.assertTrue(value);
+//		}
+//	}
+//	
+//	@Test(priority = 12)
+//	public void orangeNav12HyperlinkTest() {
+//		if (orangeNavCount > 0) {
+//			orangeNavCount--;
+//			String orangeNavpageID = getIDFromJsonFileOrangeNav("Orangenavigations12");
+//			String pageUrl = getUrlFromPage(orangeNavpageID);
+//			homepage = new HomePage();
+//			homepage.validateOrangeNavLink12();
+//			boolean value = obj.hyperLinkTest(pageUrl);
+//			Assert.assertTrue(value);
+//		}
+//	}
+
+<<<<<<<<<<<<<<<<<<<<<ENDS>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<For Image test>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+public boolean imageTest(String orangeNavPageUrl) {
+		boolean isImageDisplay = false;
+		List<WebElement> imgElements = driver.findElements(By.cssSelector("img"));
+		String[] linkimageEles = new String[imgElements.size()];
+		int i = 0;
+		// extract the images in the page
+		for (WebElement e : imgElements) {
+			linkimageEles[i] = e.getAttribute("src");
+			i++;
+		}
+
+		// test each image
+
+		for (String img : linkimageEles) {
+			if (!(img.isEmpty())) {
+				
+                URL url;
+				try {
+					url = new URL(img);
+					HttpURLConnection http = (HttpURLConnection) url.openConnection();
+					int statusCode=http.getResponseCode();
+	                if(statusCode==404||statusCode==500){
+	                	isImageDisplay = false;
+	                }
+	                else {
+	                	isImageDisplay = true;
+	                	
+	                }
+				} catch (MalformedURLException ignore) {
+					//URL is not valid
+				
+				} catch (IOException ignore) {
+					//Connection failed
+				}
+//				driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICITLY_WAIT_TIMEOUT, TimeUnit.SECONDS);
+//
+//		            if(driver.findElement(By.tagName("img")).getText().contains("not found")) {
+//		            	
+//		            }
+//				
+//				Boolean ImagePresent = (WebElement)img.getAttribute("naturalWidth").equals("0");
+//				if (ImagePresent) {
+//					driver.navigate().to(orangeNavPageUrl);
+				}
+
+//			}
+		}
+		return isImageDisplay;
+	}
+	
+	*/
+	
+	public boolean hyperLinkTest(String orangeNavPageUrl) {
+		boolean hyperLinkVal = false;
+		List<WebElement> linkElements = driver.findElements(By.tagName("a"));
+		//List<WebElement> linkElements = driver.findElements(By.xpath("//body//div//nav[@id='nav']//ul"));
+		//List<WebElement> linkElements = driver.findElements(By.xpath("/html/body/div/nav[2]"));
+		String[] linkTexts = new String[linkElements.size()];
+		int i = 0;
+		int count = 0;
+		
+		// extract the link texts of each link element
+		for (WebElement e : linkElements) {
+			linkTexts[i] = e.getText();
+			i++;
+			//count ++;
+		}
+		
+		//System.out.println(count);
+
+		// test each link
+
+		for (String t : linkTexts) {
+			if (!(t.isEmpty())) {
+				if (t.trim() == "Contacts Page") {
+					continue;
+				} else if (t.trim() == "Careers Page") {
+					continue;
+				} else {
+					try {
+						driver.findElement(By.linkText(t)).click();
+					} catch (Exception ignore) {
+
+					}
+				}
+			} else if (t == "Cookie Preference") {
+				HomePage homepage = new HomePage();
+				TestUtil testUtil = new TestUtil();
+				boolean check = getGDPRCheck(homepage, testUtil);
+				if (check) {
+					testUtil.switchToDefaultContent();
+				}
+
+			} else {
+				continue;
+			}
+			driver.navigate().to(orangeNavPageUrl);
+			hyperLinkVal = true;
+		}
+		return hyperLinkVal;
+	}
+	
+}

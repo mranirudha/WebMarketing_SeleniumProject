@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Indigene Suite]">
+  <test name="Indigene testing(failed)">
+    <groups>
+      <run>
+        <include name="Regression"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="package03.Test05">
+        <methods>
+          <include name="Case2"/>
+        </methods>
+      </class> <!-- package03.Test05 -->
+    </classes>
+  </test> <!-- Indigene testing(failed) -->
+</suite> <!-- Failed suite [Indigene Suite] -->

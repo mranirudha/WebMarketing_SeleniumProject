@@ -1,0 +1,6 @@
+Set<String> handles = driver.getWindowHandles();
+			if (handles.size() > 1) {
+				new TestBase().getNewTabPageTitle();
+				String pageTitle = getTitleFromPage(orangeNavpageID);
+				Assert.assertTrue(TestBase.driverURLChild.contains(pageTitle));
+			} else {

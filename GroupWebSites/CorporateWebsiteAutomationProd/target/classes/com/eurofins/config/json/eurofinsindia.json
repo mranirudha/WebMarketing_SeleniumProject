@@ -1,0 +1,321 @@
+[
+  {
+    "HomePage": {
+      "title": "Eurofins India",
+      "Majornavigations": {
+        "title": "BlueNavigationLinks",
+        "MajornavigationsItemCount": 3,
+        "Majornavigations1": {
+          "id": "Page1"
+        },
+        "Majornavigations2": {
+          "id": "Page2"
+        },
+        "Majornavigations3": {
+          "id": "Page3"
+        }
+      },
+      "Orangenavigations": {
+        "title": "OrangeNavigationsLinks",
+         "OrangenavigationsItemCount": 6,
+        "Orangenavigations1": {
+          "id": "Page8"
+        },
+        "Orangenavigations2": {
+          "id": "Page10"
+        },
+        "Orangenavigations3": {
+          "id": "Page6"
+        },
+        "Orangenavigations4": {
+          "id": "Page9"
+        },
+        "Orangenavigations5": {
+          "id": "Page11"
+        },
+        "Orangenavigations6": {
+          "id": "Page5"
+        }
+      },
+      "GroupMenuNavigations": {
+        "title": "GroupMenuNavigationLinks",
+        "GroupMenuNavigationLinksItemCount": 5,
+        "GroupMenunavigations1": {
+          "id": "Page13"
+        },
+        "GroupMenunavigations2": {
+          "id": "Page4"
+        },
+        "GroupMenunavigations3": {
+         "id": "Page5"
+        },
+        "GroupMenunavigations4": {
+          "id": "Page6"
+        },
+        "GroupMenunavigations5": {
+          "id": "Page7"
+        }
+      },
+      "FooterMenuNavigations": {
+        "title": "FooterMenuNavigationLinks",
+        "FooterMenuNavigationLinksItemCount": 9,
+        "FooterMenunavigations1": {
+          "id": "Page13"
+        },
+        "FooterMenunavigations2": {
+          "id": "Page4"
+        },
+        "FooterMenunavigations3": {
+          "id": "Page5"
+        },
+        "FooterMenunavigations4": {
+          "id": "Page6"
+        },
+        "FooterMenunavigations5": {
+          "id": "Page7"
+        },
+        "FooterMenunavigations6": {
+          "id": "Page14"
+        },
+        "FooterMenunavigations7": {
+          "id": "Page15"
+        },
+        "FooterMenunavigations8": {
+          "id": "Page16"
+        },
+        "FooterMenunavigations9": {
+          "id": "Page17"
+        }
+      },
+      "MainNav1": {
+        "title": "Our services",
+        "MainNav1Count": 1,
+        "MainNav1": {
+          "id": "Page18"
+        }
+      },
+      "MainNav1SubNavigations": {
+        "title": "MainNav1SubNavigationsLinks",
+        "MainNav1SubNavLinkCount": 5,
+        "MainNav1SubNavLink1": {
+          "id": "Page1"
+        },
+        "MainNav1SubNavLink2": {
+          "id": "Page2"
+        },
+        "MainNav1SubNavLink3": {
+          "id": "Page3"
+        },
+        "MainNav1SubNavLink4": {
+          "id": "Page8"
+        },
+        "MainNav1SubNavLink5": {
+          "id": "Page10"
+        }
+       },
+      "MainNav2": {
+        "title": "Eurofins IT Solutions India Pvt Ltd",
+        "MainNav2Count": 1,
+        "MainNav2": {
+          "id": "Page6"
+        }
+      },
+      "MainNav2SubNavigations": {
+        "title": "MainNav2SubNavigationsLinks",
+        "MainNav2SubNavLinkCount": 1,
+        "MainNav2SubNavLink1": {
+          "id": "Page5"
+        }
+      },
+      "MainNav3": {
+        "title": "Eurofins Careers – Rewarding results",
+        "MainNav3Count": 1,
+        "MainNav3": {
+          "id": "Page5"
+        }
+      },
+      "MainNav3SubNavigations": {
+        "title": "MainNav3SubNavigationsLinks",
+        "MainNav3SubNavLinkCount": 0,
+        "MainNav3SubNavLink1": {
+          "id": ""
+        },
+        "MainNav3SubNavLink2": {
+          "id": ""
+        }
+      },
+      "MainNav4": {
+        "title": "Eurofins India",
+        "MainNav4Count": 1,
+        "MainNav4": {
+          "id": "Page7"
+        }
+      },
+      "MainNav4SubNavigations": {
+        "title": "MainNav4SubNavigationsLinks",
+        "MainNav4SubNavLinkCount": 0,
+        "MainNav4SubNavLink1": {
+          "id": ""
+        },
+        "MainNav4SubNavLink2": {
+          "id": ""
+        }
+      },
+      "MainNav5": {
+        "title": "",
+        "MainNav5Count": 0,
+        "MainNav5": {
+          "id": ""
+        }
+      },
+      "MainNav5SubNavigations": {
+        "title": "MainNav5SubNavigationsLinks",
+        "MainNav5SubNavLinkCount": 0,
+        "MainNav5SubNavLink1": {
+          "id": ""
+        },
+        "MainNav5SubNavLink2": {
+          "id": ""
+        }
+      },
+       "MainNav6": {
+        "title": "",
+        "MainNav6Count": 0,
+        "MainNav6": {
+          "id": ""
+        }
+      },
+      "MainNav6SubNavigations": {
+        "title": "MainNav6SubNavigationsLinks",
+        "MainNav6SubNavLinkCount": 0,
+        "MainNav6SubNavLink1": {
+          "id": ""
+        },
+        "MainNav6SubNavLink2": {
+          "id": ""
+        }
+      },
+       "MainNav7": {
+        "title": "",
+        "MainNav7Count": 0,
+        "MainNav7": {
+          "id": ""
+        }
+      },
+      "MainNav7SubNavigations": {
+        "title": "MainNav7SubNavigationsLinks",
+        "MainNav7SubNavLinkCount": 0,
+        "MainNav7SubNavLink1": {
+          "id": ""
+        },
+        "MainNav7SubNavLink2": {
+          "id": ""
+        }
+      },
+       "TextBelowFooterLogo": {
+        "title": "© Eurofins Scientific 2016",
+        "Footer Text Count": 1,
+        "Footer Nav": {
+          "id": ""
+        }
+      },
+      "LastUpdatedTextMessage": {
+        "title": "Last updated: 21 April 2020",
+        "Last Updated Text Count": 1,
+        "Last Updated Nav": {
+          "id": ""
+        }
+      },
+      "Page1": {
+        "id": "Genomic Services",
+        "title": "Genomic & DNA Sequencing Services in Bangalore"
+        "url": "https://www.eurofins.in/genomic-services/"
+      },
+      "Page2": {
+        "id": "Food and Agriculture",
+        "title": "Food & agriculture analysis and testing laboratory in Bangalore, Delhi, India"
+        "url": "https://www.eurofins.in/food-and-agriculture/"
+      },
+      "Page3": {
+        "id": "Pharma",
+        "title": "Pharma Services in Bangalore"
+        "url": "https://www.eurofins.in/pharma/"
+      },
+      "Page4": {
+        "id": "Search",
+        "title": "Search"
+        "url": "https://www.eurofins.in/search/"
+      },
+      "Page5": {
+        "id": "Careers",
+        "title": "Eurofins Careers – Rewarding results"
+        "url": "https://careers.eurofins.com/in"
+      },
+      "Page6": {
+        "id": "IT Solutions",
+        "title": "Eurofins IT Solutions India Pvt Ltd"
+        "url": "https://www.eurofins.in/it-solutions/"
+      },
+      "Page7": {
+        "id": "Contacts",
+        "title": "Eurofins India"
+        "url": "https://www.eurofins.in/contacts/"
+      },
+      "Page8": {
+        "id": "Agroscience",
+        "title": "Eurofins Agroscience Services"
+        "url": "https://www.eurofins.in/agroscience/"
+      },
+      "Page9": {
+        "id": "Environment Testing",
+        "title": "Environmental Testing Laboratory - Audit & Analysis Services in India"
+        "url": "https://www.eurofins.in/environment-testing/"
+      },
+      "Page10": {
+        "id": "Eurofins Clinical Genetics",
+        "title": "Eurofins Clinical Genetics"
+        "url": "https://www.eurofinsclinicalgenetics.co.in/"
+      },
+      "Page11": {
+        "id": "Consumer Product Testing",
+        "title": "Fabric & Textile Testing Lab - Consumer Product Testing Laboratory India"
+        "url": "https://www.eurofins.in/consumer-product-testing/"
+      },
+      "Page12": {
+        "id": "Consumer Product Testing",
+        "title": "Fabric & Textile Testing Lab - Consumer Product Testing Laboratory India"
+        "url": "https://www.eurofins.in/consumer-product-testing/"
+      },
+      "Page13": {
+        "id": "HomePage",
+        "title": "Eurofins India"
+        "url": "https://www.eurofins.in/"
+      },
+      "Page14": {
+        "id": "Global Investors",
+        "title": "Eurofins Investor Relations"
+        "url": "http://www.eurofins.com/investor-relations/"
+      },
+      "Page15": {
+        "id": "sitemap",
+        "title": "sitemap"
+        "url": "https://www.eurofins.in/sitemap/"
+      },
+      "Page16": {
+        "id": "cookies",
+        "title": "Cookie Notice - Eurofins India"
+        "url": "https://www.eurofins.in/cookies/"
+      },
+      "Page17": {
+        "id": "Worldwide Interactive Map",
+        "title": "Worldwide Interactive Map"
+        "url": "http://www.eurofins.com/contact-us/worldwide-interactive-map/"
+      },
+      "Page18": {
+        "id": "Our services",
+        "title": "Our services"
+        "url": "https://www.eurofins.in/our-services/"
+      }
+    }
+  }
+]

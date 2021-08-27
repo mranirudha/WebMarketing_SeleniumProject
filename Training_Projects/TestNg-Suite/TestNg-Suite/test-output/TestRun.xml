@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Smita Suite">
+ <test name="Test Case 1" >
+  <packages>
+ 	 <package name="package01"/>
+    <classes>
+       <class name=".*" />
+    </classes>
+  </test>
+</suite>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Grid-Suite" verbose="1" parallel = "tests" thread-count="15">
+<test name="Test Case 01">
+<parameter name="node" value="localhost:5555"/>
+<parameter name="browser" value="firefox"/>
+	<classes>
+		<class name="grid.TestGrid01"/>
+	</classes>
+</test>
+
+<test name="Test Case 02">
+<parameter name="node" value="localhost:6666"/>
+<parameter name="browser" value="chrome"/>
+	<classes>
+		<class name="grid.TestGrid02"/>
+	</classes>
+</test>
+
+</suite>
+

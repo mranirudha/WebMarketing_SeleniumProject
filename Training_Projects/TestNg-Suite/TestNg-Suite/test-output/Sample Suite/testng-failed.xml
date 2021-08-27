@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Sample Suite]">
+  <test name="Running thru TEstng.XML(failed)">
+    <classes>
+      <class name="package03.Test05">
+        <methods>
+          <include name="Case2"/>
+        </methods>
+      </class> <!-- package03.Test05 -->
+      <class name="package01.Test01">
+        <methods>
+          <include name="Case1"/>
+          <include name="Case2"/>
+        </methods>
+      </class> <!-- package01.Test01 -->
+    </classes>
+  </test> <!-- Running thru TEstng.XML(failed) -->
+</suite> <!-- Failed suite [Sample Suite] -->

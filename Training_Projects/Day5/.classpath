@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="MavenCGI/src/test/java"/>
+	<classpathentry kind="src" path="PageFactoryGoogle/PageFactoryGoogle/src"/>
+	<classpathentry kind="src" path="PageFactorySoftest/PageFactorySoftest/PageFactorySoftest/src"/>
+	<classpathentry kind="src" path="PageFactorySoftest/PageFactorySoftest/src"/>
+	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
+	<classpathentry kind="output" path="MavenCGI/target/test-classes"/>
+</classpath>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <parameter name="browser" value="ch"/>
+    <classes>
+      <class name="packPageObject.SoftestRunner">
+        <methods>
+          <include name="TestAfterMethod"/>
+          <include name="OpenBrowser"/>
+          <include name="testLogin"/>
+          <include name="CloseBrowser"/>
+          <include name="initElem"/>
+        </methods>
+      </class> <!-- packPageObject.SoftestRunner -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

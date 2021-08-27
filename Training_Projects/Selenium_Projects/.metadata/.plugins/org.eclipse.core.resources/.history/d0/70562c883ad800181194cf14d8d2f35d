@@ -1,0 +1,54 @@
+package packageParallel;
+
+import java.io.File;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
+
+public class OpenCloseBrowserWithParameter
+{
+	WebDriver driver;
+	String url,fn;
+	
+	@Parameters("browser")
+	@BeforeTest
+	public void OpenBrowser(String browser)
+	{
+		if(browser.equalsIgnoreCase("ff"))
+		{
+			fn="C:\\SeleniumSetup\\GeckoDriver\\geckodriver.exe";
+			System.setProperty("webdriver.gecko.driver", fn);
+			driver=new FirefoxDriver();
+			
+		}
+		else if(browser.equalsIgnoreCase("ie"))
+		{
+			File file=new File("C:\\SeleniumSetup\\IE-Driver\\IEDriverServer.exe");
+			System.setProperty("webdriver.ie.driver", file.getAbsolutePath());
+			driver=new InternetExplorerDriver();
+		}
+		else if(browser.equalsIgnoreCase("ch"))
+		{
+			fn="C:\\SeleniumSetup\\ChromeDriver\\chromedriver.exe";
+			System.setProperty("webdriver.chrome.driver", fn);
+			driver=new ChromeDriver();
+		}
+		else
+		{
+			System.out.println("No browser defined");
+		}
+		//driver.manage().window().maximize();
+		//driver.manage().timeouts().implicitlyWait(arg0, arg1)
+	}
+	@AfterTest
+	public void CloseBrowser()
+	{
+		//driver.close();
+		driver.quit();
+	}
+}

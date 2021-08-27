@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="1" failed="2" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[<p><font color="green">Method mavenPackage.MyMavenTest_TestCase01   PASSED</p>]]>
+    </line>
+    <line>
+      <![CDATA[passed]]>
+    </line>
+    <line>
+      <![CDATA[<Html><Body><p><font color="red">Method mavenPackage.MyMavenTest_TestCase02   FAILED <a href="file:///F:/ProjectsSelenium/MavenCGI/SnapShots/mavenPackage.MyMavenTest_TestCase0219-07-2018_02_42_48.jpg" >SnapShot</a></p></Body></Html>]]>
+    </line>
+    <line>
+      <![CDATA[<Html><Body><p><font color="red">Method mavenPackage.MyMavenTest_TestCase03   FAILED <a href="file:///F:/ProjectsSelenium/MavenCGI/SnapShots/mavenPackage.MyMavenTest_TestCase0319-07-2018_02_42_52.jpg" >SnapShot</a></p></Body></Html>]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2018-07-19T09:12:20Z" name="Suite" finished-at="2018-07-19T09:12:55Z" duration-ms="35445">
+    <groups>
+    </groups>
+    <test started-at="2018-07-19T09:12:20Z" name="Test" finished-at="2018-07-19T09:12:55Z" duration-ms="35445">
+      <class name="mavenPackage.MyMavenTest">
+        <test-method is-config="true" signature="Open()[pri:0, instance:mavenPackage.MyMavenTest@75d3a5e0]" started-at="2018-07-19T09:12:20Z" name="Open" finished-at="2018-07-19T09:12:30Z" duration-ms="9739" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Open -->
+        <test-method signature="TestCase01()[pri:0, instance:mavenPackage.MyMavenTest@75d3a5e0]" started-at="2018-07-19T09:12:30Z" name="TestCase01" finished-at="2018-07-19T09:12:42Z" duration-ms="12198" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCase01 -->
+        <test-method signature="TestCase02()[pri:0, instance:mavenPackage.MyMavenTest@75d3a5e0]" started-at="2018-07-19T09:12:42Z" name="TestCase02" finished-at="2018-07-19T09:12:48Z" duration-ms="6703" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertTrue(Assert.java:44)
+at org.testng.Assert.assertTrue(Assert.java:54)
+at mavenPackage.MyMavenTest.TestCase02(MyMavenTest.java:27)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:383)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:344)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCase02 -->
+        <test-method is-config="true" signature="TestAfterMethod(org.testng.ITestResult)[pri:0, instance:mavenPackage.MyMavenTest@75d3a5e0]" started-at="2018-07-19T09:12:42Z" name="TestAfterMethod" finished-at="2018-07-19T09:12:42Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TestCase01 status=SUCCESS method=MyMavenTest.TestCase01()[pri:0, instance:mavenPackage.MyMavenTest@75d3a5e0] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[<p><font color="green">Method mavenPackage.MyMavenTest_TestCase01   PASSED</p>]]>
+            </line>
+            <line>
+              <![CDATA[passed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TestAfterMethod -->
+        <test-method is-config="true" signature="TestAfterMethod(org.testng.ITestResult)[pri:0, instance:mavenPackage.MyMavenTest@75d3a5e0]" started-at="2018-07-19T09:12:48Z" name="TestAfterMethod" finished-at="2018-07-19T09:12:49Z" duration-ms="843" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TestCase02 status=FAILURE method=MyMavenTest.TestCase02()[pri:0, instance:mavenPackage.MyMavenTest@75d3a5e0] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[<Html><Body><p><font color="red">Method mavenPackage.MyMavenTest_TestCase02   FAILED <a href="file:///F:/ProjectsSelenium/MavenCGI/SnapShots/mavenPackage.MyMavenTest_TestCase0219-07-2018_02_42_48.jpg" >SnapShot</a></p></Body></Html>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TestAfterMethod -->
+        <test-method signature="TestCase03()[pri:0, instance:mavenPackage.MyMavenTest@75d3a5e0]" started-at="2018-07-19T09:12:49Z" name="TestCase03" finished-at="2018-07-19T09:12:52Z" duration-ms="3152" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Google] but found [Goooogle]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Google] but found [Goooogle]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at mavenPackage.MyMavenTest.TestCase03(MyMavenTest.java:37)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:383)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:344)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCase03 -->
+        <test-method is-config="true" signature="TestAfterMethod(org.testng.ITestResult)[pri:0, instance:mavenPackage.MyMavenTest@75d3a5e0]" started-at="2018-07-19T09:12:52Z" name="TestAfterMethod" finished-at="2018-07-19T09:12:53Z" duration-ms="250" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TestCase03 status=FAILURE method=MyMavenTest.TestCase03()[pri:0, instance:mavenPackage.MyMavenTest@75d3a5e0] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[<Html><Body><p><font color="red">Method mavenPackage.MyMavenTest_TestCase03   FAILED <a href="file:///F:/ProjectsSelenium/MavenCGI/SnapShots/mavenPackage.MyMavenTest_TestCase0319-07-2018_02_42_52.jpg" >SnapShot</a></p></Body></Html>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TestAfterMethod -->
+        <test-method is-config="true" signature="Close()[pri:0, instance:mavenPackage.MyMavenTest@75d3a5e0]" started-at="2018-07-19T09:12:53Z" name="Close" finished-at="2018-07-19T09:12:55Z" duration-ms="2499" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Close -->
+      </class> <!-- mavenPackage.MyMavenTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

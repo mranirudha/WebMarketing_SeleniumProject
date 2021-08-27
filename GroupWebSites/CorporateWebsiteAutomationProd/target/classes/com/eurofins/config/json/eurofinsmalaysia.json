@@ -1,0 +1,31 @@
+[
+  {
+    "Eurofins Malaysia HomePage": {
+      "title": "Eurofins Malaysia",
+      "Eurofins Malaysia Majornavigations": {
+        "title": "BlueNavigationLinks",
+        "Majornavigations1": {
+          "title": "Environment Testing"
+        },
+        "Majornavigations2": {
+          "title": "Industrial & Consumer Product Testing"
+        },
+        "Majornavigations3": {
+          "title": "Food & Feed Testing"
+        }
+      },
+      "Eurofins Malaysia Orangenavigations": {
+        "title": "OrangeNavigationsLinks",
+        "Orangenavigations1": {
+          "title": "Resources"
+        },
+        "Orangenavigations2": {
+          "title": "Eurofins Careers"
+        },
+        "Orangenavigations3": {
+          "title": "Contact Us"
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="15" parallel="tests" name="Failed suite [Grid-Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="15" parallel="tests" name="Test Case 02(failed)">
+    <parameter name="node" value="n2"/>
+    <classes>
+      <class name="grid.TestGrid02">
+        <methods>
+          <include name="GridTC02"/>
+          <include name="atAfterTest"/>
+          <include name="NodeAndBrowser"/>
+        </methods>
+      </class> <!-- grid.TestGrid02 -->
+    </classes>
+  </test> <!-- Test Case 02(failed) -->
+</suite> <!-- Failed suite [Grid-Suite] -->

@@ -1,0 +1,7 @@
+package day2Package;
+
+public class ExampleMultipleElements extends openCloseBrowser 
+{
+
+	
+}

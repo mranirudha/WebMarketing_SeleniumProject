@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="15" name="TestSuit">
+  <test thread-count="15" name="GeneratedFromTestNG">
+    <classes>
+     <class name="packageParallel.Parallel01"/>
+      <class name="package02.Test03"/>
+      <class name="package03.Test05"/>
+      <class name="package01.Test01"/>
+     <class name="packageParallel.Parallel02"/>
+      <class name="packageParallel.Parallel03"/> 
+      <class name="package01.Test02"/>
+      <class name="package03.Test04"/>
+      <class name="grid.TestGrid02"/>
+      <class name="grid.TestGrid01"/>
+    </classes>
+  </test> <!-- GeneratedFromTestNG -->
+</suite> <!-- TestSuit -->

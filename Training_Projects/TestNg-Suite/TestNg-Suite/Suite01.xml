@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Smita Suite">
+ <test name="First Test">
+
+     <classes>
+		<class name="package01.Test02"/>
+		<methods>
+		    <exclude name="Case3"/>
+		</methods>
+	</classes>
+
+  </test>
+  
+ <test name="Second Test">
+  <classes>
+		<class name="package02.Test03"/>
+		<methods>
+		    <include name="Case4"/>
+		</methods>
+	</classes>
+  </test>
+</suite>

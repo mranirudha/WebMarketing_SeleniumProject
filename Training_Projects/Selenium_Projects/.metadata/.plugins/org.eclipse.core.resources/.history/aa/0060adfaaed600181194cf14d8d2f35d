@@ -1,0 +1,22 @@
+package day2Package;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
+
+public class CountOfClientImages extends openCloseBrowser
+{
+
+	@Test
+	public void CountOfClientImages() 
+	{
+	
+		url="http://www.softest-training.com/index.php";
+		driver.get(url);				
+		//driver.findElement(By.xpath(("//td[@class='fotterdeti']/a[6]")));
+		driver.findElement(By.linkText("Clients")).click();;
+		
+	}	
+}

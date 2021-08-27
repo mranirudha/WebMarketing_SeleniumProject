@@ -1,0 +1,14 @@
+package day2Package;
+
+import org.testng.annotations.Test;
+
+public class GoogleSearchResultCount extends openCloseBrowser 
+{
+
+	@Test
+	public void SearchResultCount() 
+	{
+				
+		
+	}
+}
